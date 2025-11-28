@@ -19,7 +19,8 @@
     "dist/**/*.d.ts"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "prebuild": "npm run build:index",
