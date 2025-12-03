@@ -41,7 +41,6 @@ export const ServiceSchema = z.object({
   id: idSchema,
   name: nameSchema,
   platformId: platformIdSchema,
-  networkId: z.string(),
   contracts: z.array(ContractSchema),
   link: z.string().url().optional(),
   description: z.string().optional(),
