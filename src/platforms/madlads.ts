@@ -10,8 +10,6 @@ export const platform: PlatformRaw = {
   tags: ["nft-collection"],
 };
 
-import { vestingContract } from "./streamflow";
-
 const solboundContract = {
   name: "SolBound",
   address: "7DkjPwuKxvz6Viiawtbmb4CqnMKP6eGb1WqYas1airUS",
@@ -22,7 +20,7 @@ const service: ServiceRaw = {
   id: `${platform.id}-launch`,
   name: "W Claim",
   platformId: platform.id,
-  contractsRaw: [solboundContract, vestingContract],
+  contractsRaw: [solboundContract],
 };
 
 export const services: ServiceRaw[] = [service];

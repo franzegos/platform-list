@@ -17,12 +17,6 @@ export const platform: PlatformRaw = {
   tags: ["dapp"],
 };
 
-const ammV3Contract = {
-  name: "AMM v3",
-  address: "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q",
-  networkId: NetworkId.solana,
-};
-
 const ammV4Contract = {
   name: "AMM v4",
   address: "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
@@ -105,13 +99,6 @@ const launchpadContract = {
   name: "Launchpad",
   address: "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
   networkId: NetworkId.solana,
-};
-
-const ammV3Service: ServiceRaw = {
-  id: `${platform.id}-amm-v3`,
-  name: "Stake",
-  platformId: platform.id,
-  contractsRaw: [ammV3Contract],
 };
 
 const ammV4Service: ServiceRaw = {
@@ -213,7 +200,6 @@ const launchpadService: ServiceRaw = {
 };
 
 export const services: ServiceRaw[] = [
-  ammV3Service,
   ammV4Service,
   ammV5Service,
   ammRootingService,

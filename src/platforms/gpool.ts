@@ -9,17 +9,4 @@ export const platform: PlatformRaw = {
   isDeprecated: true,
 };
 
-const stakingContract = {
-  name: "Staking",
-  address: "poo1sKMYsZtDDS7og73L68etJQYyn6KXhXTLz1hizJc",
-  networkId: NetworkId.solana,
-};
-
-const stakingService: ServiceRaw = {
-  id: `${platform.id}-staking`,
-  name: "Staking",
-  platformId: platform.id,
-  contractsRaw: [stakingContract],
-};
-
-export const services: ServiceRaw[] = [stakingService];
+export const services: ServiceRaw[] = [];
