@@ -72,6 +72,7 @@ Add a logo image for your platform in the `img/` directory:
 - **Dimensions**: Exactly **64x64 pixels**
 
 You can convert images to WebP format using tools like:
+
 - Online: [Squoosh](https://squoosh.app/)
 - CLI: `cwebp input.png -o output.webp`
 
@@ -79,16 +80,16 @@ You can convert images to WebP format using tools like:
 
 ### Platform Metadata
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | Yes | Unique identifier (lowercase, no spaces) |
-| `name` | string | Yes | Display name of the platform |
-| `description` | string | No | Brief description of the platform |
-| `defiLlamaId` | string | No | DefiLlama protocol ID |
-| `isDeprecated` | boolean | No | Mark platform as deprecated (defaults to false) |
-| `tokens` | string[] | No | Array of token mint addresses |
-| `tags` | PlatformTag[] | Yes | Platform categories (see below) |
-| `links` | object | Yes | Social links and resources |
+| Field          | Type          | Required | Description                                     |
+| -------------- | ------------- | -------- | ----------------------------------------------- |
+| `id`           | string        | Yes      | Unique identifier (lowercase, no spaces)        |
+| `name`         | string        | Yes      | Display name of the platform                    |
+| `description`  | string        | No       | Brief description of the platform               |
+| `defiLlamaId`  | string        | No       | DefiLlama protocol ID                           |
+| `isDeprecated` | boolean       | No       | Mark platform as deprecated (defaults to false) |
+| `tokens`       | string[]      | No       | Array of token mint addresses                   |
+| `tags`         | PlatformTag[] | Yes      | Platform categories (see below)                 |
+| `links`        | object        | Yes      | Social links and resources                      |
 
 ### Available Tags
 
@@ -225,17 +226,20 @@ const service: ServiceRaw = {
 Please follow these rules when contributing:
 
 ### 1. Image Requirements
+
 - **Format**: All images MUST be in `.webp` format
 - **Dimensions**: All images MUST be exactly **64x64 pixels**
 - **File name**: Must match the platform ID exactly
 - **Location**: Place in the `img/` directory
 
 ### 2. Naming Conventions
+
 - **Platform IDs**: Always in lowercase, use hyphens for spaces (e.g., `my-platform`)
 - **File names**: Match platform ID exactly (e.g., `my-platform.ts`, `my-platform.webp`)
 - **Service IDs**: Format as `{platform-id}-{service-name}` (e.g., `jupiter-exchange-swap`)
 
 ### 3. Code Quality
+
 - Use TypeScript types provided by the library (`PlatformRaw`, `ServiceRaw`, `ContractRaw`)
 - Follow the existing code structure and patterns
 - Ensure all required fields are filled
@@ -262,17 +266,20 @@ Make sure all tests pass and there are no TypeScript errors.
 ## Submitting Your Contribution
 
 1. Commit your changes:
+
    ```bash
    git add .
    git commit -m "feat: add [platform-name] platform"
    ```
 
 2. Push to your fork:
+
    ```bash
    git push origin add-platform-yourplatform
    ```
 
 3. Create a Pull Request on GitHub with:
+
    - Clear title: "Add [Platform Name] platform"
    - Description including:
      - Platform website
@@ -334,6 +341,7 @@ export default services;
 ```
 
 **Key points from this example:**
+
 - Platform ID is lowercase (`jupiter-governance`)
 - Contracts that other platforms might use are exported (`jupiterGovernanceContract`, `jupiterVoteContract`)
 - Internal contracts are not exported (`asrContract`)
@@ -344,6 +352,7 @@ export default services;
 ## Questions?
 
 If you have questions or need help:
+
 - Open an issue on GitHub
 - Check existing platforms for examples
 - Review the TypeScript types in [src/types.ts](src/types.ts)
