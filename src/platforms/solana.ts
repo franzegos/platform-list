@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "solana",
   name: "Solana",
@@ -19,23 +18,25 @@ export const platform: PlatformRaw = {
 const solanaStakingContract = {
   name: "Staking",
   address: "Stake11111111111111111111111111111111111111",
+  networkId: NetworkId.solana,
 };
 
 const solanaStakePoolContract = {
   name: "Stake Pool",
   address: "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy",
+  networkId: NetworkId.solana,
 };
 
 const singleValidatorStakePoolContract = {
   name: "Single Validator Stake Pool",
   address: "SVSPxpvHdN29nkVg9rPapPNDddN5DipNLRUFhyjFThE",
+  networkId: NetworkId.solana,
 };
 
 const stakingService: ServiceRaw = {
   id: `${platform.id}-stake`,
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [solanaStakingContract],
 };
 
@@ -43,7 +44,6 @@ const stakePoolService: ServiceRaw = {
   id: `${platform.id}-stake-pool`,
   name: "Stake Pool",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [solanaStakePoolContract],
 };
 
@@ -51,7 +51,6 @@ const singleValidatorStakePoolService: ServiceRaw = {
   id: `${platform.id}-single-validator-stake-pool`,
   name: "Single-Validator Stake Pool",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [singleValidatorStakePoolContract],
 };
 

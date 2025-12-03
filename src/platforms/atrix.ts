@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "atrix",
   name: "Atrix",
@@ -18,18 +17,19 @@ export const platform: PlatformRaw = {
 const farmContract = {
   name: "Staking",
   address: "BLDDrex4ZSWBgPYaaH6CQCzkJXWfzCiiur9cSFJT8t3x",
+  networkId: NetworkId.solana,
 };
 
 const poolContract = {
   name: "Staking",
   address: "HvwYjjzPbXWpykgVZhqvvfeeaSraQVnTiQibofaFw9M7",
+  networkId: NetworkId.solana,
 };
 
 const farmService: ServiceRaw = {
   id: `${platform.id}-farm`,
   name: "Farms",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [farmContract],
 };
 
@@ -37,7 +37,6 @@ const poolService: ServiceRaw = {
   id: `${platform.id}-pool`,
   name: "Pools",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [poolContract],
 };
 

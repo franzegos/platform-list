@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "bonkrewards",
   name: "Bonk Rewards",
@@ -19,33 +18,37 @@ export const platform: PlatformRaw = {
 const contract = {
   name: "Staking",
   address: "STAKEkKzbdeKkqzKpLkNQD3SUuLgshDKCD7U8duxAbB",
+  networkId: NetworkId.solana,
 };
 
 const fireContract = {
   name: "Fire",
   address: "FiRESpaNzgYUiba5vkb44CZJLZjrux1AUECdfwPRsNkg",
+  networkId: NetworkId.solana,
 };
 
 const swapContract = {
   name: "Swap",
   address: "BSwp6bEBihVLdqJRKGgzjcGLHkcTuzmSo1TQkHepzH8p",
+  networkId: NetworkId.solana,
 };
 
 const bonkMasContract = {
   name: "BonkMas",
   address: "BMas2pUrC5GR1ZJFbJLy2UmBcEgCfdxB5QLSBrLRnvK4",
+  networkId: NetworkId.solana,
 };
 
 const daoContract = {
   name: "DAO",
   address: "HA99cuBQCCzZu1zuHN2qBxo2FBo1cxNLwKkdt6Prhy8v",
+  networkId: NetworkId.solana,
 };
 
 const stakingService: ServiceRaw = {
   id: `${platform.id}-staking`,
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract],
 };
 
@@ -53,7 +56,6 @@ const fireService: ServiceRaw = {
   id: `${platform.id}-fire`,
   name: "Fire",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [fireContract],
 };
 
@@ -61,7 +63,6 @@ const swapService: ServiceRaw = {
   id: `${platform.id}-swap`,
   name: "Swap",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [swapContract],
 };
 
@@ -69,7 +70,6 @@ const bonkMasService: ServiceRaw = {
   id: `${platform.id}-bonkmas`,
   name: "BONKmas",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [bonkMasContract],
 };
 
@@ -77,7 +77,6 @@ const daoService: ServiceRaw = {
   id: `${platform.id}-dao`,
   name: "DAO",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [daoContract],
 };
 

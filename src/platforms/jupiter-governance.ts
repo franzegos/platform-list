@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 
 export const platform: PlatformRaw = {
   id: "jupiter-governance",
@@ -16,23 +15,25 @@ export const platform: PlatformRaw = {
 export const jupiterGovernanceContract = {
   name: "Governance",
   address: "GovaE4iu227srtG2s3tZzB4RmWBzw8sTwrCLZz7kN7rY",
+  networkId: NetworkId.solana,
 };
 
 export const jupiterVoteContract = {
   name: "Locker Vote",
   address: "voTpe3tHQ7AjQHMapgSue2HJFAh2cGsdokqN3XqmVSj",
+  networkId: NetworkId.solana,
 };
 
 const asrContract = {
   name: "ASR Distributor",
   address: "Dis2TfkFnXFkrtvAktEkw37sdb7qwJgY6H7YZJwk51wK",
+  networkId: NetworkId.solana,
 };
 
 const governanceService: ServiceRaw = {
   id: `jupiter-governance-vote`,
   name: "Vote",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterGovernanceContract, jupiterVoteContract],
 };
 
@@ -40,7 +41,6 @@ const asrService: ServiceRaw = {
   id: `${platform.id}-asr`,
   name: "ASR",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [asrContract],
 };
 

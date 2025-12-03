@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "sendit",
   name: "Sendit",
@@ -17,23 +16,25 @@ export const platform: PlatformRaw = {
 const earnContract = {
   name: "SOL Earn",
   address: "SenditVXUyY6zjSPYucQTff9rfUkAWnxoijY87FJwGV",
+  networkId: NetworkId.solana,
 };
 
 const tradeContract = {
   name: "Trade",
   address: "SenditXmUCHPeV6iyFoMY8dRNB4PofGKTfp52hEWpJx",
+  networkId: NetworkId.solana,
 };
 
 const lendContract = {
   name: "Memecoin Yielding",
   address: "Senditho8dTeu9BpXBFfN3b479NyXEbJ26ynw9pPJNY",
+  networkId: NetworkId.solana,
 };
 
 const earnService: ServiceRaw = {
   id: `${platform.id}-sol-earn`,
   name: "Sol Earn",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [earnContract],
 };
 
@@ -41,7 +42,6 @@ const tradeService: ServiceRaw = {
   id: `${platform.id}-trade`,
   name: "Trade",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [tradeContract],
 };
 
@@ -49,7 +49,6 @@ const lendService: ServiceRaw = {
   id: `${platform.id}-lend`,
   name: "Memecoin Yielding",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [lendContract],
 };
 

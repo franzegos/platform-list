@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 
 export const platform: PlatformRaw = {
   id: "raydium",
@@ -21,83 +20,97 @@ export const platform: PlatformRaw = {
 const ammV3Contract = {
   name: "AMM v3",
   address: "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q",
+  networkId: NetworkId.solana,
 };
 
 const ammV4Contract = {
   name: "AMM v4",
   address: "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+  networkId: NetworkId.solana,
 };
 
 const ammV5Contract = {
   name: "AMM v5",
   address: "5quBtoiQqxF9Jv6KYKctB59NT3gtJD2Y65kdnB1Uev3h",
+  networkId: NetworkId.solana,
 };
 
 const ammRootingContract = {
   name: "AMM Rooting",
   address: "routeUGWgWzqBWFcrCfv8tritsqukccJPu3q5GPP3xS",
+  networkId: NetworkId.solana,
 };
 
 const clmmContract = {
   name: "CLMM",
   address: "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK",
+  networkId: NetworkId.solana,
 };
 
 const cpmmContract = {
   name: "CPMM",
   address: "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+  networkId: NetworkId.solana,
 };
 
 const farmV3Contract = {
   name: "Farm V3",
   address: "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q",
+  networkId: NetworkId.solana,
 };
 
 const farmV4Contract = {
   name: "Farm V4",
   address: "CBuCnLe26faBpcBP2fktp4rp8abpcAnTWft6ZrP5Q4T",
+  networkId: NetworkId.solana,
 };
 
 const farmV5Contract = {
   name: "Farm V5",
   address: "9KEPoZmtHUrBbhWN1v1KWLMkkvwY6WLtAVUCPRtRjP4z",
+  networkId: NetworkId.solana,
 };
 
 const farmV6Contract = {
   name: "Farm V6",
   address: "FarmqiPv5eAj3j1GMdMCMUGXqPUvmquZtMy86QH6rzhG",
+  networkId: NetworkId.solana,
 };
 
 const idoContract = {
   name: "IDO V1",
   address: "6FJon3QE27qgPVggARueB22hLvoh22VzJpXv4rBEoSLF",
+  networkId: NetworkId.solana,
 };
 
 const idoV2Contract = {
   name: "IDO V2",
   address: "CC12se5To1CdEuw7fDS27B7Geo5jJyL7t5UK2B44NgiH",
+  networkId: NetworkId.solana,
 };
 
 const idoV3Contract = {
   name: "IDO V3",
   address: "9HzJyW1qZsEiSfMUf6L2jo3CcTKAyBmSyKdwQeYisHrC",
+  networkId: NetworkId.solana,
 };
 
 const idoV4Contract = {
   name: "IDO V4",
   address: "DropEU8AvevN3UrXWXTMuz3rqnMczQVNjq3kcSdW2SQi",
+  networkId: NetworkId.solana,
 };
 
 const launchpadContract = {
   name: "Launchpad",
   address: "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+  networkId: NetworkId.solana,
 };
 
 const ammV3Service: ServiceRaw = {
   id: `${platform.id}-amm-v3`,
   name: "Stake",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [ammV3Contract],
 };
 
@@ -105,7 +118,6 @@ const ammV4Service: ServiceRaw = {
   id: `${platform.id}-amm-v4`,
   name: "AMM v4",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [ammV4Contract],
 };
 
@@ -113,7 +125,6 @@ const ammV5Service: ServiceRaw = {
   id: `${platform.id}-amm-v5`,
   name: "AMM v5",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [ammV5Contract],
 };
 
@@ -121,7 +132,6 @@ const ammRootingService: ServiceRaw = {
   id: `${platform.id}-amm-rooting`,
   name: "Swap",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [ammRootingContract],
 };
 
@@ -129,7 +139,6 @@ const clmmService: ServiceRaw = {
   id: `${platform.id}-clmm`,
   name: "CLMM",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [clmmContract],
 };
 
@@ -137,7 +146,6 @@ const cpmmService: ServiceRaw = {
   id: `${platform.id}-cpmm`,
   name: "CPMM",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [cpmmContract],
 };
 
@@ -145,7 +153,6 @@ const farmV3Service: ServiceRaw = {
   id: `${platform.id}-farm-v3`,
   name: "Stake",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [farmV3Contract],
 };
 
@@ -153,7 +160,6 @@ const farmV4Service: ServiceRaw = {
   id: `${platform.id}-farm-v4`,
   name: "Farm V4",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [farmV4Contract],
 };
 
@@ -161,7 +167,6 @@ const farmV5Service: ServiceRaw = {
   id: `${platform.id}-farm-v5`,
   name: "Farm V5",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [farmV5Contract],
 };
 
@@ -169,7 +174,6 @@ const farmV6Service: ServiceRaw = {
   id: `${platform.id}-farm-v6`,
   name: "Farm V6",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [farmV6Contract],
 };
 
@@ -177,7 +181,6 @@ const idoV1Service: ServiceRaw = {
   id: `${platform.id}-ido-v1`,
   name: "IDO V1",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [idoContract],
 };
 
@@ -185,7 +188,6 @@ const idoV2Service: ServiceRaw = {
   id: `${platform.id}-ido-v2`,
   name: "IDO V2",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [idoV2Contract],
 };
 
@@ -193,7 +195,6 @@ const idoV3Service: ServiceRaw = {
   id: `${platform.id}-ido-v3`,
   name: "IDO V3",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [idoV3Contract],
 };
 
@@ -201,7 +202,6 @@ const idoV4Service: ServiceRaw = {
   id: `${platform.id}-ido-v4`,
   name: "IDO V4",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [idoV4Contract],
 };
 
@@ -209,7 +209,6 @@ const launchpadService: ServiceRaw = {
   id: `${platform.id}-launchpad`,
   name: "Launchpad",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [launchpadContract],
 };
 

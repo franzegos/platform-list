@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "banx",
   name: "Banx",
@@ -20,23 +19,25 @@ export const platform: PlatformRaw = {
 const banxContract = {
   name: "Banx Bonds",
   address: "4tdmkuY6EStxbS6Y8s5ueznL3VPMSugrvQuDeAHGZhSt",
+  networkId: NetworkId.solana,
 };
 
 const banxVaultsContract = {
   name: "Vaults",
   address: "BanxxEcFZPJLKhS59EkwTa8SZez8vDYTiJVN78mGHWDi",
+  networkId: NetworkId.solana,
 };
 
 const airdropContract = {
   name: "Airdrop",
   address: "BanxBXWfsNL1Fg2dwJV6ZJ5qBieYn9pHqb5PAVrwPigN",
+  networkId: NetworkId.solana,
 };
 
 const bondsService: ServiceRaw = {
   id: "banx-bonds",
   name: "Bonds",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [banxContract],
 };
 
@@ -44,7 +45,6 @@ const vaultsService: ServiceRaw = {
   id: "banx-vaults",
   name: "Vaults",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [banxVaultsContract, banxContract],
 };
 
@@ -52,7 +52,6 @@ const airdropService: ServiceRaw = {
   id: "banx-airdrop",
   name: "Airdrop",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 

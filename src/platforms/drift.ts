@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "drift",
   name: "Drift",
@@ -20,23 +19,25 @@ export const platform: PlatformRaw = {
 const contract = {
   name: "Drift",
   address: "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+  networkId: NetworkId.solana,
 };
 
 const proxyContract = {
   name: "Jit Proxy",
   address: "J1TnP8zvVxbtF5KFp5xRmWuvG9McnhzmBd9XGfCyuxFP",
+  networkId: NetworkId.solana,
 };
 
 const airdropContract = {
   name: "Airdrop",
   address: "E7HtfkEMhmn9uwL7EFNydcXBWy5WCYN1vFmKKjipEH1x",
+  networkId: NetworkId.solana,
 };
 
 const perpsService: ServiceRaw = {
   id: `${platform.id}-main`,
   name: "Main",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract],
 };
 
@@ -44,7 +45,6 @@ const marketMakerService: ServiceRaw = {
   id: `${platform.id}-market-maker`,
   name: "Market Maker",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [proxyContract],
 };
 
@@ -52,7 +52,6 @@ const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
   name: "Airdrop",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 

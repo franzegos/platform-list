@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "sanctum",
   name: "Sanctum",
@@ -20,38 +19,43 @@ export const platform: PlatformRaw = {
 const poolContract = {
   name: "Infinity Pool",
   address: "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+  networkId: NetworkId.solana,
 };
 
 const infContract = {
   name: "Infinity",
   address: "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+  networkId: NetworkId.solana,
 };
 
 const voteContract = {
   name: "Vote",
   address: "VAU1T7S5UuEHmMvXtXMVmpEoQtZ2ya7eRb7gcN47wDp",
+  networkId: NetworkId.solana,
 };
 
 const stakingContract = {
   name: "Staking",
   address: "bon4Kh3x1uQK16w9b9DKgz3Aw4AP1pZxBJk55Q6Sosb",
+  networkId: NetworkId.solana,
 };
 
 const routerContract = {
   name: "Router",
   address: "stkitrT1Uoy18Dk1fTrgPw8W6MVzoCfYoAFT4MLsmhq",
+  networkId: NetworkId.solana,
 };
 
 const asrContract = {
   name: "ASR",
   address: "9R2CZDyVjBBK2bxx6NfKdnYMYfh8TQEphUUgZ4861XqJ",
+  networkId: NetworkId.solana,
 };
 
 const voteService: ServiceRaw = {
   id: `${platform.id}-vote`,
   name: "Vote",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [voteContract],
 };
 
@@ -59,7 +63,6 @@ const stakingService: ServiceRaw = {
   id: `${platform.id}-staking`,
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [stakingContract],
 };
 
@@ -67,7 +70,6 @@ const poolService: ServiceRaw = {
   id: `${platform.id}-pool`,
   name: "Infinity Pool",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [poolContract],
 };
 
@@ -75,7 +77,6 @@ const routerService: ServiceRaw = {
   id: `${platform.id}-router`,
   name: "Router",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [routerContract],
 };
 
@@ -83,7 +84,6 @@ const tradeService: ServiceRaw = {
   id: `${platform.id}-trade`,
   name: "Trade",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [infContract],
 };
 
@@ -91,7 +91,6 @@ const asrService: ServiceRaw = {
   id: `${platform.id}-asr`,
   name: "ASR",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [asrContract],
 };
 

@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "save",
   name: "Save",
@@ -23,28 +22,31 @@ export const platform: PlatformRaw = {
 export const saveContract = {
   name: "Lending",
   address: "So1endDq2YkqhipRh3WViPa8hdiSpxWy6z3Z6tMCpAo",
+  networkId: NetworkId.solana,
 };
 
 const wrapperContract = {
   name: "Wrapper",
   address: "3JmCcXAjmBpFzHHuUpgJFfTQEQnAR7K1erNLtWV1g7d9",
+  networkId: NetworkId.solana,
 };
 
 const migrationContract = {
   name: "Save Migration",
   address: "S2SquuEfKRHm1riCj13WobJJzf3CgUwu7QmijxjpTfx",
+  networkId: NetworkId.solana,
 };
 
 const rewardContract = {
   name: "Reward",
   address: "mrksLcZ6rMs9xkmJgw6oKiR3GECw44Gb5NeDqu64kiw",
+  networkId: NetworkId.solana,
 };
 
 const lendingService: ServiceRaw = {
   id: `${platform.id}-lending`,
   name: "Lending",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [saveContract],
 };
 
@@ -52,7 +54,6 @@ const migrationService: ServiceRaw = {
   id: `${platform.id}-migration`,
   name: "Migration",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [migrationContract],
 };
 
@@ -60,7 +61,6 @@ const wrapperService: ServiceRaw = {
   id: `${platform.id}-wrapper`,
   name: "Wrapper",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [wrapperContract],
 };
 
@@ -68,7 +68,6 @@ const rewardService: ServiceRaw = {
   id: `${platform.id}-reward`,
   name: "Reward",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [rewardContract],
 };
 

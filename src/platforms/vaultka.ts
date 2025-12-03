@@ -1,11 +1,4 @@
-import { NetworkId } from "@sonarwatch/portfolio-core";
-import {
-  Contract,
-  ContractRaw,
-  PlatformRaw,
-  Service,
-  ServiceRaw,
-} from "../types";
+import { Contract, ContractRaw, PlatformRaw, Service, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "vaultka",
   name: "Vaultka",
@@ -30,6 +23,7 @@ const lendingV1Contracts: ContractRaw[] = [
 ].map((address) => ({
   name: "Lending V1",
   address,
+  networkId: NetworkId.solana,
 }));
 
 const stragegyV1Contracts: ContractRaw[] = [
@@ -43,25 +37,25 @@ const stragegyV1Contracts: ContractRaw[] = [
 ].map((address) => ({
   name: "Stragegy V1",
   address,
+  networkId: NetworkId.solana,
 }));
 
 const vaultkaV2Contract: ContractRaw = {
   name: "Vaultka V2",
   address: "V1enDN8GY531jkFp3DWEQiRxwYYsnir8SADjHmkt4RG",
+  networkId: NetworkId.solana,
 };
 
 const lendingV1Service: ServiceRaw = {
   id: `${platform.id}-lending-v1`,
   name: "Lending V1",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [...lendingV1Contracts],
 };
 const strategyV1Service: ServiceRaw = {
   id: `${platform.id}-stragegy-v1`,
   name: "Strategy V1",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [...stragegyV1Contracts],
 };
 
@@ -69,7 +63,6 @@ const lendingV2Service: ServiceRaw = {
   id: `${platform.id}-lending-v2`,
   name: "Lending V2",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [vaultkaV2Contract],
 };
 
@@ -77,7 +70,6 @@ const leverageService: ServiceRaw = {
   id: `${platform.id}-leverage`,
   name: "Leverage",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [vaultkaV2Contract],
 };
 

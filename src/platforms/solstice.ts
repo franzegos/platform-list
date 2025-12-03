@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "solstice",
   name: "Solstice",
@@ -18,23 +17,25 @@ export const platform: PlatformRaw = {
 export const contract = {
   name: "Yield Vault",
   address: "eUSXyKoZ6aGejYVbnp3wtWQ1E8zuokLAJPecPxxtgG3",
+  networkId: NetworkId.solana,
 };
 
 export const usxJustEarnContract = {
   name: "USX Just Earn",
   address: "JECcmzAWytxXQtMN3taGmAYhTK4CDEfwEGrzfMvVeGXm",
+  networkId: NetworkId.solana,
 };
 
 export const usxContract = {
   name: "USX",
   address: "USXyiSTsPEWz55pSK7sZoUL79ntoVGQbaTDT57tH6bx",
+  networkId: NetworkId.solana,
 };
 
 const yieldVaultService: ServiceRaw = {
   id: `${platform.id}-yield-vault`,
   name: "Yield Vault",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract],
 };
 
@@ -42,7 +43,6 @@ const usxJustEarnService: ServiceRaw = {
   id: `${platform.id}-usx-just-earn`,
   name: "USX Just Earn",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [usxJustEarnContract],
 };
 
@@ -50,7 +50,6 @@ const usxService: ServiceRaw = {
   id: `${platform.id}-usx`,
   name: "Lock",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [usxContract],
 };
 

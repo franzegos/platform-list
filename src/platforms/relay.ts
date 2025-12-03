@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "relay",
   name: "Relay",
@@ -16,14 +15,27 @@ import { jupiterV6Contract } from "./jupiter-exchange";
 const contract = {
   name: "WSOL Unwrapper",
   address: "DzACDmwdqc5ADPJKnZEcQAgpsPdvYzvYBMihPNN48pFE",
+  networkId: NetworkId.solana,
+};
+
+const relayContract = {
+  name: "Relay Bridge",
+  address: "99vQwtBwYtrqqD9YSXbdum3KBdxPAVxYTaQ3cfnJSrN2",
+  networkId: NetworkId.solana,
 };
 
 const service: ServiceRaw = {
   id: `${platform.id}-bridge`,
   name: "Bridge",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract, jupiterV6Contract],
 };
 
-export const services: ServiceRaw[] = [service];
+const relayService: ServiceRaw = {
+  id: `${platform.id}-relay-bridge`,
+  name: "Relay Bridge",
+  platformId: platform.id,
+  contractsRaw: [relayContract],
+};
+
+export const services: ServiceRaw[] = [service, relayService];

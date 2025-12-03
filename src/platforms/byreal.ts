@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "byreal",
   name: "Byreal",
@@ -15,28 +14,31 @@ export const platform: PlatformRaw = {
 const clmmContract = {
   name: "CLMMM",
   address: "REALQqNEomY6cQGZJUGwywTBD2UmDT32rZcNnfxQ5N2",
+  networkId: NetworkId.solana,
 };
 
 const resetContract = {
   name: "Reset",
   address: "REALdpFGDDsiD9tvxYsXBTDpgH1gGQEqJ8YSLdYQWGD",
+  networkId: NetworkId.solana,
 };
 
 const routerContract = {
   name: "Router",
   address: "REALp6iMBDTctQqpmhBo4PumwJGcybbnDpxtax3ara3",
+  networkId: NetworkId.solana,
 };
 
 const rfqContract = {
   name: "RFQ",
   address: "REALFP9S4VmrAixmeYa68FrPKn4NVD2QFxxMfz9arhz",
+  networkId: NetworkId.solana,
 };
 
 const clmmService: ServiceRaw = {
   id: "byreal-clmm",
   name: "CLMM",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [clmmContract],
 };
 
@@ -44,7 +46,6 @@ const resetService: ServiceRaw = {
   id: "byreal-reset",
   name: "Reset Launchpad",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [resetContract],
 };
 
@@ -52,7 +53,6 @@ const routerService: ServiceRaw = {
   id: "byreal-router",
   name: "Router",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [routerContract],
 };
 
@@ -60,7 +60,6 @@ const rfqService: ServiceRaw = {
   id: "byreal-rfq",
   name: "RFQ",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [rfqContract],
 };
 

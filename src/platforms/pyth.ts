@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "pyth",
   name: "Pyth",
@@ -20,28 +19,31 @@ export const platform: PlatformRaw = {
 const contract = {
   name: "Staking",
   address: "pytS9TjG1qyAZypk7n8rw8gfW9sUaqqYyMhJQ4E7JCQ",
+  networkId: NetworkId.solana,
 };
 
 const airdropContract = {
   name: "Airdrop",
   address: "EXxqB6XPLczReFcZyigfbdowB6WGYtnkLYC4XZ2ae9ch",
+  networkId: NetworkId.solana,
 };
 
 export const expressRelayContract = {
   name: "Express Relay",
   address: "PytERJFhAKuNNuaiXkApLfWzwNwSNDACpigT3LwQfou",
+  networkId: NetworkId.solana,
 };
 
 const governanceContract = {
   name: "Governance",
   address: "pytGY6tWRgGinSCvRLnSv4fHfBTMoiDGiCsesmHWM6U",
+  networkId: NetworkId.solana,
 };
 
 const stakingService: ServiceRaw = {
   id: `${platform.id}-staking`,
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract],
 };
 
@@ -49,7 +51,6 @@ const governanceService: ServiceRaw = {
   id: `${platform.id}-governance`,
   name: "Governance",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [governanceContract],
 };
 
@@ -57,7 +58,6 @@ const expressRelayService: ServiceRaw = {
   id: `${platform.id}-express-relay`,
   name: "Express Relay",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [expressRelayContract],
 };
 
@@ -65,7 +65,6 @@ const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
   name: "Airdrop",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 

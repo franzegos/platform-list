@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 import { solanaStakePoolContract } from "./solana";
 export const platform: PlatformRaw = {
   id: "solayer",
@@ -28,28 +27,31 @@ export const platform: PlatformRaw = {
 const solayerContract = {
   name: "Solayer",
   address: "sSo1iU21jBrU9VaJ8PJib1MtorefUV4fzC9GURa2KNn",
+  networkId: NetworkId.solana,
 };
 
 const airdropContract = {
   name: "Airdrop",
   address: "ARDPkhymCbfdan375FCgPnBJQvUfHeb7nHVdBfwWSxrp",
+  networkId: NetworkId.solana,
 };
 
 const sUDCContract = {
   name: "sUDC",
   address: "s1aysqpEyZyijPybUV89oBGeooXrR22wMNLjnG2SWJA",
+  networkId: NetworkId.solana,
 };
 
 const endoAvsContract = {
   name: "Endo Avs",
   address: "endoLNCKTqDn8gSVnN2hDdpgACUPWHZTwoYnnMybpAT",
+  networkId: NetworkId.solana,
 };
 
 const solayerService: ServiceRaw = {
   id: `${platform.id}`,
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [solayerContract],
 };
 
@@ -57,7 +59,6 @@ const restakingService: ServiceRaw = {
   id: `${platform.id}-restaking`,
   name: "Restaking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [solayerContract, solanaStakePoolContract],
 };
 
@@ -65,7 +66,6 @@ const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
   name: "Airdrop",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 
@@ -73,7 +73,6 @@ const sUSDService: ServiceRaw = {
   id: `${platform.id}-susd`,
   name: "sUSD",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [sUDCContract],
 };
 
@@ -81,7 +80,6 @@ const delegateService: ServiceRaw = {
   id: `${platform.id}-delegate`,
   name: "Delegate",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [endoAvsContract, solayerContract, solanaStakePoolContract],
 };
 

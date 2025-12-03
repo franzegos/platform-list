@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "alldomains",
   name: "AllDomains",
@@ -19,23 +18,25 @@ export const platform: PlatformRaw = {
 const contract = {
   name: "Name Service",
   address: "ALTNSZ46uaAUU7XUV6awvdorLGqAsPwa9shm7h4uP2FK",
+  networkId: NetworkId.solana,
 };
 
 const coSignerContract = {
   name: "Top Level Domain CoSigner",
   address: "TCSVHqadS2swhap43BnZtmeEAPNXfpc3w2HLBredVaR",
+  networkId: NetworkId.solana,
 };
 
 const nameHouseContract = {
   name: "Name House",
   address: "NH3uX6FtVE2fNREAioP7hm5RaozotZxeL6khU1EHx51",
+  networkId: NetworkId.solana,
 };
 
 const nameHouseService: ServiceRaw = {
   id: `${platform.id}-name-house`,
   name: "Name House",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [nameHouseContract],
 };
 

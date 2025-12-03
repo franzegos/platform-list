@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "gpool",
   name: "GPool",
@@ -13,13 +12,13 @@ export const platform: PlatformRaw = {
 const stakingContract = {
   name: "Staking",
   address: "poo1sKMYsZtDDS7og73L68etJQYyn6KXhXTLz1hizJc",
+  networkId: NetworkId.solana,
 };
 
 const stakingService: ServiceRaw = {
   id: `${platform.id}-staking`,
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [stakingContract],
 };
 

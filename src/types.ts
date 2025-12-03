@@ -1,5 +1,7 @@
 import { NetworkIdType } from "@sonarwatch/portfolio-core";
 
+export { NetworkId } from "@sonarwatch/portfolio-core";
+
 export type Platform = {
   id: string;
   name: string;
@@ -49,7 +51,6 @@ export type Service = {
   id: string;
   name: string;
   platformId: string;
-  networkId: NetworkIdType;
   contracts: Contract[];
   link?: string;
   description?: string;
@@ -71,7 +72,4 @@ export type Contract = {
   networkId: NetworkIdType;
 };
 
-export type ContractRaw = Omit<
-  Contract,
-  "id" | "serviceId" | "platformId" | "networkId"
->;
+export type ContractRaw = Omit<Contract, "id" | "serviceId" | "platformId">;

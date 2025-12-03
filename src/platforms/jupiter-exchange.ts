@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 
 export const platform: PlatformRaw = {
   id: "jupiter-exchange",
@@ -24,93 +23,109 @@ export const platform: PlatformRaw = {
 export const jupiterV7Contract = {
   name: "Swap V7",
   address: "JUP7pNXFL1G2BESRYMtZ1jepzfDQVffkkkf5JhXWWhC",
+  networkId: NetworkId.solana,
 };
 
 export const jupiterV6Contract = {
   name: "Swap V6",
   address: "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+  networkId: NetworkId.solana,
 };
 
 const jupiterV5Contract = {
   name: "Swap v5",
   address: "JUP5pEAZeHdHrLxh5UCwAbpjGwYKKoquCpda2hfP4u8",
+  networkId: NetworkId.solana,
 };
 
 const jupiterV4Contract = {
   name: "Swap v4",
   address: "JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB",
+  networkId: NetworkId.solana,
 };
 
 const jupiterV3Contract = {
   name: "Swap v3",
   address: "JUP3c2Uh3WA4Ng34tw6kPd2G4C5BB21Xo36Je1s32Ph",
+  networkId: NetworkId.solana,
 };
 
 const jupiterV2Contract = {
   name: "Swap v2",
   address: "JUP2jxvXaqu7NQY1GmNF4m1vodw12LVXYxbFL2uJvfo",
+  networkId: NetworkId.solana,
 };
 
 const jupiterV1Contract = {
   name: "Swap v1",
   address: "JUP6i4ozu5ydDCnLiMogSckDPpbtr7BJ4FtzYWkb5Rk",
+  networkId: NetworkId.solana,
 };
 
 export const apeContract = {
   name: "Ape",
   address: "JSWX3pKDbj2EdCMu4ei7sPYSpdcwZNyjkDSteoHQ4UH",
+  networkId: NetworkId.solana,
 };
 
 export const jupiterLimitV1Contract = {
   name: "Limit v1",
   address: "jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu",
+  networkId: NetworkId.solana,
 };
 
 export const jupiterLimitContract = {
   name: "Limit",
   address: "j1o2qRpjcyUwEvwtcfhEQefh773ZgjxcVRry7LDqg5X",
+  networkId: NetworkId.solana,
 };
 
 export const jupiterDcaContract = {
   name: "DCA",
   address: "DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M",
+  networkId: NetworkId.solana,
 };
 
 const jupiterDcaVaContract = {
   name: "VA",
   address: "VALaaymxQh2mNy2trH9jUqHT1mTow76wpTcGmSWSwJe",
+  networkId: NetworkId.solana,
 };
 
 export const jupiterLockContract = {
   name: "Lock",
   address: "LocpQgucEQHbqNABEYvBvwoxCPsSbG91A1QaQhQQqjn",
+  networkId: NetworkId.solana,
 };
 
 export const jupiterPerpsContract = {
   name: "Perps",
   address: "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+  networkId: NetworkId.solana,
 };
 
 const airdropContract = {
   name: "Airdrop",
   address: "meRjbQXFNf5En86FXT2YPz1dQzLj4Yb3xK8u1MVgqpb",
+  networkId: NetworkId.solana,
 };
 
 const rfqContract = {
   name: "JupiterZ",
   address: "61DFfeTKM7trxYcPQCM78bJ794ddZprZpAwAnLiwTpYH",
+  networkId: NetworkId.solana,
 };
 
 const inviteContract = {
   name: "Invite",
   address: "inv1tEtSwRMtM44tbvJGNiTxMvDfPVnX9StyqXfDfks",
+  networkId: NetworkId.solana,
 };
 
 const swapV7Service: ServiceRaw = {
   id: `${platform.id}-swap-v7`,
   name: "Swap v7",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterV7Contract],
 };
 
@@ -118,7 +133,6 @@ const swapV6Service: ServiceRaw = {
   id: `${platform.id}-swap`,
   name: "Swap v6",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterV6Contract],
 };
 
@@ -126,7 +140,6 @@ const swapV5Service: ServiceRaw = {
   id: `${platform.id}-swap-v5`,
   name: "Swap v5",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterV5Contract],
 };
 
@@ -134,7 +147,6 @@ const swapV4Service: ServiceRaw = {
   id: `${platform.id}-swap-v4`,
   name: "Swap v4",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterV4Contract],
 };
 
@@ -142,7 +154,6 @@ const swapV3Service: ServiceRaw = {
   id: `${platform.id}-swap-v3`,
   name: "Swap v3",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterV3Contract],
 };
 
@@ -150,7 +161,6 @@ const swapV2Service: ServiceRaw = {
   id: `${platform.id}-swap-v2`,
   name: "Swap v2",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterV2Contract],
 };
 
@@ -158,7 +168,6 @@ const swapV1Service: ServiceRaw = {
   id: `${platform.id}-swap-v1`,
   name: "Swap v1",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterV1Contract],
 };
 
@@ -166,7 +175,6 @@ const apeService: ServiceRaw = {
   id: `${platform.id}-ape`,
   name: "Ape",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [apeContract, jupiterV6Contract],
 };
 
@@ -174,7 +182,6 @@ const jupiterZService: ServiceRaw = {
   id: `${platform.id}-jupiter-z`,
   name: "JupiterZ",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [rfqContract],
 };
 
@@ -182,7 +189,6 @@ const limitV1Service: ServiceRaw = {
   id: `${platform.id}-limitv1`,
   name: "Limit v1",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterLimitV1Contract],
 };
 
@@ -190,7 +196,6 @@ const limitService: ServiceRaw = {
   id: `${platform.id}-limit`,
   name: "Limit",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterLimitContract],
 };
 
@@ -198,7 +203,6 @@ const dcaSwapService: ServiceRaw = {
   id: `${platform.id}-dca-swap`,
   name: "DCA",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterDcaContract, jupiterV6Contract],
 };
 
@@ -206,7 +210,6 @@ const dcaDepositService: ServiceRaw = {
   id: `${platform.id}-dca-deposit`,
   name: "DCA",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterDcaContract],
 };
 
@@ -214,7 +217,6 @@ const dcaVaService: ServiceRaw = {
   id: `${platform.id}-dcava`,
   name: "DCA VA",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterDcaVaContract],
 };
 
@@ -222,7 +224,6 @@ const lockService: ServiceRaw = {
   id: `${platform.id}-lock`,
   name: "Lock",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterLockContract],
 };
 
@@ -230,7 +231,6 @@ const perpsService: ServiceRaw = {
   id: `${platform.id}-perps`,
   name: "Perps",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [jupiterPerpsContract],
 };
 
@@ -238,7 +238,6 @@ const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
   name: "Airdrop",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 
@@ -246,7 +245,6 @@ const inviteService: ServiceRaw = {
   id: `${platform.id}-invite`,
   name: "Invite",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [inviteContract],
 };
 

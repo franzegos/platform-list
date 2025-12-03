@@ -18,10 +18,10 @@ const services: Service[] = servicesRaw.map(
     ...s,
     contracts: s.contractsRaw.map((c) => ({
       ...c,
-      id: `${s.networkId}-${c.address}`,
+      id: `${c.networkId}-${c.address}`,
       platformId: s.platformId,
       serviceId: s.id,
-      networkId: s.networkId,
+      networkId: c.networkId,
     })),
   }),
 );

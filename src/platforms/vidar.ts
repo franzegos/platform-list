@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "vidar",
   name: "Vidar",
@@ -16,33 +15,37 @@ export const platform: PlatformRaw = {
 const nokContract = {
   name: "wNOK Minter",
   address: "sta1L8xffHa3K1puWcTX1m4QWHek4Gs8PJZQtGEFwmX",
+  networkId: NetworkId.solana,
 };
 
 const ljupMinterContract = {
   name: "LJUP Minter",
   address: "1juPgnkY3i9dGkcuZahmby3exN4qpoq5HZ7rKKZsKtA",
+  networkId: NetworkId.solana,
 };
 
 const safeLaunchContract = {
   name: "SafeLaunch",
   address: "SAFEuracFxm3sZfhUNtComzcyS4RTkcNccbkWWb4PH5",
+  networkId: NetworkId.solana,
 };
 
 const stakingContract = {
   name: "BGLD Staking",
   address: "BStkNZqnbLCmZWs52BcJVNiG3XMwoiS1DuwnGg4ZQrrC",
+  networkId: NetworkId.solana,
 };
 
 const minerContract = {
   name: "BGLD Miner",
   address: "BGLDbLHXzZEKvZX2PAkvSChWtZYySZ16Drj6NX247AfY",
+  networkId: NetworkId.solana,
 };
 
 const ljupService: ServiceRaw = {
   id: `${platform.id}-ljup`,
   name: "LJUP Minter",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [ljupMinterContract],
 };
 
@@ -50,7 +53,6 @@ const nokService: ServiceRaw = {
   id: `${platform.id}-wNOK`,
   name: "wNOK Minter",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [nokContract],
 };
 
@@ -58,7 +60,6 @@ const safeLaunchService: ServiceRaw = {
   id: `${platform.id}-safe-launch`,
   name: "SafeLaunch",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [safeLaunchContract],
 };
 
@@ -66,7 +67,6 @@ const bgldStakingService: ServiceRaw = {
   id: `${platform.id}-bgld-staking`,
   name: "BGLD Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [stakingContract],
 };
 
@@ -74,7 +74,6 @@ const bgldMinerService: ServiceRaw = {
   id: `${platform.id}-bgld-miner`,
   name: "BGLD Miner",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [minerContract],
 };
 

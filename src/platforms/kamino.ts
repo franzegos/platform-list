@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "kamino",
   name: "Kamino",
@@ -23,48 +22,55 @@ import { expressRelayContract } from "./pyth";
 export const kaminoLendContract = {
   name: "Kamino Lend",
   address: "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+  networkId: NetworkId.solana,
 };
 
 const poolsContract = {
   name: "Liquidity",
   address: "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc",
+  networkId: NetworkId.solana,
 };
 
 const kaminoFarmContract = {
   name: "Kamino Farm",
   address: "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr",
+  networkId: NetworkId.solana,
 };
 
 const limitOrderContract = {
   name: "Kamino Limit Order",
   address: "LiMoM9rMhrdYrfzUCxQppvxCSG1FcrUK9G8uLq4A1GF",
+  networkId: NetworkId.solana,
 };
 
 const vaultContract = {
   name: "Kamino Vault",
   address: "KvauGMspG5k6rtzrqqn7WNn3oZdyKqLKwK2XWQ8FLjd",
+  networkId: NetworkId.solana,
 };
 
 const leverageOnVaultContract = {
   name: "Leverage",
   address: "CRhtqXk98ATqo1R8gLg7qcpEMuvoPzqD5GNicPPqLMD",
+  networkId: NetworkId.solana,
 };
 
 const scopePriceContract = {
   name: "Scope Price",
   address: "HFn8GnPADiny6XqUoWE8uRPPxb29ikn4yTuPa9MF2fWJ",
+  networkId: NetworkId.solana,
 };
 
 const airdropContract = {
   name: "Airdrop",
   address: "KdisqEcXbXKaTrBFqeDLhMmBvymLTwj9GmhDcdJyGat",
+  networkId: NetworkId.solana,
 };
 
 const scopePriceService: ServiceRaw = {
   id: `${platform.id}-scope-price`,
   name: "Scope Price",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [scopePriceContract],
 };
 
@@ -72,7 +78,6 @@ const kaminoLendingService: ServiceRaw = {
   id: `${platform.id}-lend`,
   name: "Lending",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [kaminoLendContract],
 };
 
@@ -80,7 +85,6 @@ const kaminoMultiplyService: ServiceRaw = {
   id: `${platform.id}-multiply`,
   name: "Multiply",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [kaminoLendContract, jupiterV6Contract],
 };
 
@@ -88,7 +92,6 @@ const kaminoLimitOrderService: ServiceRaw = {
   id: `${platform.id}-limit-order`,
   name: "Limit Order",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [limitOrderContract],
 };
 
@@ -96,7 +99,6 @@ const swapService: ServiceRaw = {
   id: `${platform.id}-swap-dflow`,
   name: "Swap",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [limitOrderContract, contract],
 };
 
@@ -104,7 +106,6 @@ const swapJupiterService: ServiceRaw = {
   id: `${platform.id}-swap-jupiter`,
   name: "Swap",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [limitOrderContract, jupiterV6Contract],
 };
 
@@ -112,7 +113,6 @@ const swapPythService: ServiceRaw = {
   id: `${platform.id}-swap-pyth`,
   name: "Swap",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [limitOrderContract, expressRelayContract],
 };
 
@@ -120,7 +120,6 @@ const kaminoLiquidityService: ServiceRaw = {
   id: `${platform.id}-liquidity`,
   name: "Liquidity",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [poolsContract, kaminoFarmContract],
 };
 
@@ -128,7 +127,6 @@ const vaultLeverageService: ServiceRaw = {
   id: `${platform.id}-leverage`,
   name: "Leverage",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [leverageOnVaultContract],
 };
 
@@ -136,7 +134,6 @@ const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
   name: "Airdrop",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 

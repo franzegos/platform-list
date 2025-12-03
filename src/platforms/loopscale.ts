@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "loopscale",
   name: "Loopscale",
@@ -18,18 +17,19 @@ export const platform: PlatformRaw = {
 const contract = {
   name: "Loopscale",
   address: "1oopBoJG58DgkUVKkEzKgyG9dvRmpgeEm1AVjoHkF78",
+  networkId: NetworkId.solana,
 };
 
 const creditBookContract = {
   name: "CreditBook",
   address: "abfcSQac2vK2Pa6UAJb37DzarVxF15bDTdphJzAqYYp",
+  networkId: NetworkId.solana,
 };
 
 const service: ServiceRaw = {
   id: "loopscale",
   name: "Loopscale",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract],
 };
 
@@ -37,7 +37,6 @@ const creditBookService: ServiceRaw = {
   id: "loopscale-creditbook",
   name: "CreditBook",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [creditBookContract],
 };
 

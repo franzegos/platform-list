@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "streamflow",
   name: "Streamflow",
@@ -21,28 +20,31 @@ export const platform: PlatformRaw = {
 export const vestingContract = {
   name: "Vesting",
   address: "strmRqUCoQUgGUan5YhzUZa6KqdzwX5L6FpUxfmKg5m",
+  networkId: NetworkId.solana,
 };
 
 const stakingContract = {
   name: "Staking",
   address: "STAKEvGqQTtzJZH6BWDcbpzXXn2BBerPAgQ3EGLN2GH",
+  networkId: NetworkId.solana,
 };
 
 const airdropsContract = {
   name: "Airdrops",
   address: "aSTRM2NKoKxNnkmLWk9sz3k74gKBk9t7bpPrTGxMszH",
+  networkId: NetworkId.solana,
 };
 
 const airdropContract = {
   name: "Airdrop Distribution",
   address: "MErKy6nZVoVAkryxAejJz2juifQ4ArgLgHmaJCQkU7N",
+  networkId: NetworkId.solana,
 };
 
 const vestingService: ServiceRaw = {
   id: `${platform.id}-vesting`,
   name: "Vesting",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [vestingContract],
 };
 
@@ -50,7 +52,6 @@ const stakingService: ServiceRaw = {
   id: `${platform.id}-staking`,
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [stakingContract],
 };
 
@@ -58,7 +59,6 @@ const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrops`,
   name: "Airdrops",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropsContract],
 };
 
@@ -66,7 +66,6 @@ const airdropDistributionService: ServiceRaw = {
   id: `${platform.id}-airdrop-distribution`,
   name: "Airdrop Distribution",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 

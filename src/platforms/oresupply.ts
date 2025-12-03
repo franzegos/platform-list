@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "oresupply",
   name: "OreSupply",
@@ -18,28 +17,31 @@ export const platform: PlatformRaw = {
 const contract = {
   name: "Mining",
   address: "poo1sKMYsZtDDS7og73L68etJQYyn6KXhXTLz1hizJc",
+  networkId: NetworkId.solana,
 };
 
 const legacyStakingContract = {
   name: "V1",
   address: "BoostzzkNfCA9D1qNuN5xZxB5ErbK4zQuBeTHGDpXT1",
+  networkId: NetworkId.solana,
 };
 
 const v2Contract = {
   name: "V2",
   address: "oreV2ZymfyeXgNgBdqMkumTqqAprVqgBWQfoYkrtKWQ",
+  networkId: NetworkId.solana,
 };
 
 const v3Contract = {
   name: "V3",
   address: "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv",
+  networkId: NetworkId.solana,
 };
 
 const service: ServiceRaw = {
   id: `${platform.id}-mining`,
   name: "Mining",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract],
 };
 
@@ -47,7 +49,6 @@ const v1Service: ServiceRaw = {
   id: `${platform.id}-v1`,
   name: "V1",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [legacyStakingContract],
 };
 
@@ -55,7 +56,6 @@ const v2Service: ServiceRaw = {
   id: `${platform.id}-v2`,
   name: "V2",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [v2Contract],
 };
 
@@ -63,7 +63,6 @@ const v3Service: ServiceRaw = {
   id: `${platform.id}-v3`,
   name: "V3",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [v3Contract],
 };
 

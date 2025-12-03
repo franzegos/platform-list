@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "madlads",
   name: "MadLads",
@@ -16,13 +15,13 @@ import { vestingContract } from "./streamflow";
 const solboundContract = {
   name: "SolBound",
   address: "7DkjPwuKxvz6Viiawtbmb4CqnMKP6eGb1WqYas1airUS",
+  networkId: NetworkId.solana,
 };
 
 const service: ServiceRaw = {
   id: `${platform.id}-launch`,
   name: "W Claim",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [solboundContract, vestingContract],
 };
 

@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "wasabi",
   name: "Wasabi",
@@ -18,13 +17,13 @@ import { jupiterV6Contract } from "./jupiter-exchange";
 const contract = {
   name: "Main",
   address: "spicyTHtbmarmUxwFSHYpA8G4uP2nRNq38RReMpoZ9c",
+  networkId: NetworkId.solana,
 };
 
 const tradeService: ServiceRaw = {
   id: `${platform.id}-trade`,
   name: "Trade",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract, jupiterV6Contract],
 };
 
@@ -32,7 +31,6 @@ const earnService: ServiceRaw = {
   id: `${platform.id}-earn`,
   name: "Trade",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract],
 };
 

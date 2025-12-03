@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "nxfinance",
   name: "NX Finance",
@@ -15,28 +14,31 @@ export const platform: PlatformRaw = {
 const contract = {
   name: "Lend",
   address: "NXFiKimQN3QSL3CDhCXddyVmLfrai8HK36bHKaAzK7g",
+  networkId: NetworkId.solana,
 };
 
 const leverageContract = {
   name: "Leverage",
   address: "EHBN9YKtMmrZhj8JZqyBQRGqyyeHw5xUB1Q5eAHszuMt",
+  networkId: NetworkId.solana,
 };
 
 const stakingContract = {
   name: "Staking",
   address: "9un1MopS4NRhgVDLXB1DqoQDTmq1un48YKJuPiMLpSc9",
+  networkId: NetworkId.solana,
 };
 
 const airdropContract = {
   name: "Airdrop S2",
   address: "AFGtKskic2qabduNyvykojV5nbdMsg8vet74ehreQ4bh",
+  networkId: NetworkId.solana,
 };
 
 const service: ServiceRaw = {
   id: `${platform.id}-lend`,
   name: "Lend",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [contract],
 };
 
@@ -44,7 +46,6 @@ const leverageService: ServiceRaw = {
   id: `${platform.id}-leverage`,
   name: "Leverage",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [leverageContract],
 };
 
@@ -52,7 +53,6 @@ const stakingService: ServiceRaw = {
   id: `${platform.id}-staking`,
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [stakingContract],
 };
 
@@ -60,7 +60,6 @@ const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
   name: "Airdrop",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 

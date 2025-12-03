@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "defituna",
   name: "DeFiTuna",
@@ -17,23 +16,25 @@ export const platform: PlatformRaw = {
 const defiTunaContract = {
   name: "DefiTuna",
   address: "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD",
+  networkId: NetworkId.solana,
 };
 
 const stakingContract = {
   name: "Staking",
   address: "tUnst2Y2sbmgSgARBpSBZhqPzpoy2iUsdCwb5ToYVJa",
+  networkId: NetworkId.solana,
 };
 
 const fusionAmmContract = {
   name: "Fusion AMM",
   address: "fUSioN9YKKSa3CUC2YUc4tPkHJ5Y6XW1yz8y6F7qWz9",
+  networkId: NetworkId.solana,
 };
 
 const defiTunaService: ServiceRaw = {
   id: "defituna",
   name: "Lending",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [defiTunaContract],
 };
 
@@ -41,7 +42,6 @@ const stakingService: ServiceRaw = {
   id: "defituna-staking",
   name: "Staking",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [stakingContract],
 };
 
@@ -49,7 +49,6 @@ const fusionAmmService: ServiceRaw = {
   id: "defituna-fusion-amm",
   name: "Fusion AMM",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [fusionAmmContract],
 };
 

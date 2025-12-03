@@ -1,4 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "metaplex",
   name: "Metaplex",
@@ -18,11 +18,13 @@ export const platform: PlatformRaw = {
 export const metaplexContract = {
   name: "Metaplex",
   address: "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+  networkId: NetworkId.solana,
 };
 
 export const bubblegumContract = {
   name: "Bubblegum",
   address: "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY",
+  networkId: NetworkId.solana,
 };
 
 export const services: ServiceRaw[] = [];

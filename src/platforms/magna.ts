@@ -1,5 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
-import { NetworkId } from "@sonarwatch/portfolio-core";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "magna",
   name: "Magna",
@@ -16,18 +15,19 @@ export const platform: PlatformRaw = {
 const airdropContract = {
   name: "Vesting Airdrop",
   address: "3zK38YBP6u3BpLUpaa6QhRHh4VXdv3J8cmD24fFpuyqy",
+  networkId: NetworkId.solana,
 };
 
 const maintContract = {
   name: "Core",
   address: "magnaSHyv8zzKJJmr8NSz5JXmtdGDTTFPEADmvNAwbj",
+  networkId: NetworkId.solana,
 };
 
 const airdropService: ServiceRaw = {
   id: `${platform.id}-airdrop`,
   name: "Vesting Airdrop",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [airdropContract],
 };
 
@@ -35,7 +35,6 @@ const service: ServiceRaw = {
   id: `${platform.id}-core`,
   name: "Asset Management",
   platformId: platform.id,
-  networkId: NetworkId.solana,
   contractsRaw: [maintContract],
 };
 
