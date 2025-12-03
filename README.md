@@ -39,6 +39,7 @@ fetchPlatforms()
 To publish a new version:
 
 ```bash
+npm run build:index
 npm run commit:index
 npm version patch
 git push origin main --tags
