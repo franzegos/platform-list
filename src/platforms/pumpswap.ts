@@ -18,7 +18,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "pumpswap",
+  id: "pumpswap-amm",
   name: "PumpSwap AMM",
   platformId: platform.id,
   contractsRaw: [contract],

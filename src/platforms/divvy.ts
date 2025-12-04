@@ -23,7 +23,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "divvy",
+  id: "divvy-betting",
   name: "Divvy",
   platformId: platform.id,
   contractsRaw: [contract],

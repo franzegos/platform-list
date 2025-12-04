@@ -49,7 +49,7 @@ const endoAvsContract = {
 };
 
 export const solayerService: ServiceRaw = {
-  id: `${platform.id}`,
+  id: `${platform.id}-staking`,
   name: "Staking",
   platformId: platform.id,
   contractsRaw: [solayerContract],

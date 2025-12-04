@@ -32,7 +32,7 @@ const fusionAmmContract = {
 };
 
 export const defiTunaService: ServiceRaw = {
-  id: "defituna",
+  id: "defituna-lending",
   name: "Lending",
   platformId: platform.id,
   contractsRaw: [defiTunaContract],

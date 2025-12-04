@@ -21,7 +21,7 @@ const contract: ContractRaw = {
 };
 
 export const strategiesService: ServiceRaw = {
-  id: platform.id,
+  id: `${platform.id}-strategies`,
   name: "Strategies",
   platformId: platform.id,
   contractsRaw: [contract],

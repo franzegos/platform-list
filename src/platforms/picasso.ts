@@ -25,7 +25,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "picasso",
+  id: "picasso-restaking",
   name: "Picasso",
   platformId: platform.id,
   contractsRaw: [contract],

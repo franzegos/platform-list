@@ -22,7 +22,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "exponent",
+  id: "exponent-core",
   name: "Core",
   platformId: platform.id,
   contractsRaw: [contract],

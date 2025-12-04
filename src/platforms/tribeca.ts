@@ -24,7 +24,7 @@ const governanceContract = {
 };
 
 export const service: ServiceRaw = {
-  id: `${platform.id}`,
+  id: `${platform.id}-locker`,
   name: "Locker",
   platformId: platform.id,
   contractsRaw: [contract],

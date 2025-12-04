@@ -18,7 +18,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "mooncake",
+  id: "mooncake-leveraged-tokens",
   name: "Leveraged Tokens",
   platformId: platform.id,
   contractsRaw: [contract],

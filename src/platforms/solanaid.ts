@@ -18,7 +18,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "solanaid",
+  id: "solanaid-staking",
   name: "Staking",
   platformId: platform.id,
   contractsRaw: [contract],

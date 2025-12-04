@@ -21,7 +21,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "flash",
+  id: "flash-earn",
   name: "Earn",
   platformId: platform.id,
   contractsRaw: [contract],

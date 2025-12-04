@@ -23,7 +23,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "symmetry",
+  id: "symmetry-main",
   name: "Symmetry",
   platformId: platform.id,
   contractsRaw: [contract],

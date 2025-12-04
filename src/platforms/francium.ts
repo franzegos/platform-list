@@ -24,7 +24,7 @@ const contract = {
 };
 
 export const service: ServiceRaw = {
-  id: "francium",
+  id: "francium-lending",
   name: "Francium",
   platformId: platform.id,
   contractsRaw: [contract],

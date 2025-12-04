@@ -27,7 +27,7 @@ const creditBookContract = {
 };
 
 export const service: ServiceRaw = {
-  id: "loopscale",
+  id: "loopscale-lending",
   name: "Loopscale",
   platformId: platform.id,
   contractsRaw: [contract],

@@ -33,7 +33,7 @@ const airdropContract = {
 };
 
 export const service: ServiceRaw = {
-  id: "fragmetric",
+  id: "fragmetric-restaking",
   name: "Fragmetric",
   platformId: platform.id,
   contractsRaw: [contract],
