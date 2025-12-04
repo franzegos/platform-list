@@ -15,9 +15,45 @@ export const platform: PlatformRaw = {
   tags: ["dapp"],
 };
 
+export const systemContract = {
+  name: "System",
+  address: "11111111111111111111111111111111",
+  networkId: NetworkId.solana,
+};
+
+export const solanaComputeBudgetContract = {
+  name: "Compute Budget",
+  address: "ComputeBudget111111111111111111111111111111",
+  networkId: NetworkId.solana,
+};
+
 const solanaStakingContract = {
   name: "Staking",
   address: "Stake11111111111111111111111111111111111111",
+  networkId: NetworkId.solana,
+};
+
+export const addressLookupTableContract = {
+  name: "Address Lookup Table",
+  address: "AddressLookupTab1e1111111111111111111111111",
+  networkId: NetworkId.solana,
+};
+
+export const solanaAssociatedTokenContract = {
+  name: "Associated Token Account",
+  address: "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+  networkId: NetworkId.solana,
+};
+
+export const solanaTokenProgramContract = {
+  name: "Token Program",
+  address: "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  networkId: NetworkId.solana,
+};
+
+export const solanaToken2022ProgramContract = {
+  name: "Token 2022 Program",
+  address: "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
   networkId: NetworkId.solana,
 };
 
