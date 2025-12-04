@@ -9,4 +9,11 @@ export const platform: PlatformRaw = {
   isDeprecated: true,
 };
 
-export const services: ServiceRaw[] = [];
+export const closeTokenAccountService: ServiceRaw = {
+  id: `${platform.id}`,
+  name: "Close Token Account",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const services: ServiceRaw[] = [closeTokenAccountService];

@@ -10,4 +10,11 @@ export const platform: PlatformRaw = {
   tags: ["tool"],
 };
 
-export const services: ServiceRaw[] = [];
+export const billingService: ServiceRaw = {
+  id: `${platform.id}-billing`,
+  name: "Billing",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const services: ServiceRaw[] = [billingService];

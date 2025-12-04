@@ -1,4 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
+import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "texture",
   name: "Texture",
@@ -10,4 +10,30 @@ export const platform: PlatformRaw = {
   },
   tags: ["dapp"],
 };
-export const services: ServiceRaw[] = [];
+
+const lendingContractV1 = {
+  name: "Lending",
+  address: "MLENdNkmK61mGd4Go8BJX9PhYPN3azrAKRQsAC7u55v",
+  networkId: NetworkId.solana,
+};
+
+const lendingContractV2 = {
+  name: "Lending",
+  address: "sUperbZBsdZa4s7pWPKQaQ2fRTesjKxupxagZ8FSgVi",
+  networkId: NetworkId.solana,
+};
+
+const priceContract = {
+  name: "Price",
+  address: "priceEvKXX3KERsitDpmvujXfPFYesmEspw4kiC3ryF",
+  networkId: NetworkId.solana,
+};
+
+export const lendingService: ServiceRaw = {
+  id: `${platform.id}-lending`,
+  name: "Lending",
+  platformId: platform.id,
+  contractsRaw: [lendingContractV1, lendingContractV2, priceContract],
+};
+
+export const services: ServiceRaw[] = [lendingService];

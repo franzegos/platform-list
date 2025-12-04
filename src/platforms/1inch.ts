@@ -29,11 +29,18 @@ const whitelistContract = {
   networkId: NetworkId.solana,
 };
 
-export const whitelistService: ServiceRaw = {
+const whitelistService: ServiceRaw = {
   id: `${platform.id}-whitelist`,
   name: "Whitelist Service",
   platformId: platform.id,
   contractsRaw: [whitelistContract],
 };
 
-export const services: ServiceRaw[] = [whitelistService];
+export const crossCHainService: ServiceRaw = {
+  id: `${platform.id}-cross-chain-escrow`,
+  name: "Cross-Chain Escrow",
+  platformId: platform.id,
+  contractsRaw: [sourceContract, destinationContract],
+};
+
+export const services: ServiceRaw[] = [whitelistService, crossCHainService];

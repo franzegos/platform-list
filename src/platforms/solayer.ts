@@ -24,7 +24,7 @@ export const platform: PlatformRaw = {
   ],
 };
 
-const solayerContract = {
+export const solayerContract = {
   name: "Solayer",
   address: "sSo1iU21jBrU9VaJ8PJib1MtorefUV4fzC9GURa2KNn",
   networkId: NetworkId.solana,
@@ -42,7 +42,7 @@ const sUDCContract = {
   networkId: NetworkId.solana,
 };
 
-const endoAvsContract = {
+export const endoAvsContract = {
   name: "Endo Avs",
   address: "endoLNCKTqDn8gSVnN2hDdpgACUPWHZTwoYnnMybpAT",
   networkId: NetworkId.solana,
@@ -83,10 +83,18 @@ export const delegateService: ServiceRaw = {
   contractsRaw: [endoAvsContract],
 };
 
+export const withdrawService: ServiceRaw = {
+  id: `${platform.id}-withdraw`,
+  name: "Withdraw",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
 export const services: ServiceRaw[] = [
   solayerService,
   restakingService,
   airdropService,
   sUSDService,
   delegateService,
+  withdrawService,
 ];

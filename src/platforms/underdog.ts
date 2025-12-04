@@ -9,7 +9,7 @@ export const platform: PlatformRaw = {
   tags: ["tool", "dapp"],
 };
 
-const mainContract = {
+export const mainContract = {
   name: "Core",
   address: "updg8JyjrmFE2h3d71p71zRXDR8q4C6Up8dDoeq3LTM",
   networkId: NetworkId.solana,
@@ -22,4 +22,11 @@ export const service: ServiceRaw = {
   contractsRaw: [mainContract],
 };
 
-export const services: ServiceRaw[] = [service];
+export const metadataService: ServiceRaw = {
+  id: `${platform.id}-metadata`,
+  name: "Metadata",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const services: ServiceRaw[] = [service, metadataService];

@@ -68,8 +68,16 @@ export const airdropService: ServiceRaw = {
   contractsRaw: [aidropContract],
 };
 
+export const dlnService: ServiceRaw = {
+  id: `${platform.id}-dln`,
+  name: "DLN",
+  platformId: platform.id,
+  contractsRaw: [sourceContract, destContract],
+};
+
 export const services: ServiceRaw[] = [
   transferService,
   vaultService,
   airdropService,
+  dlnService,
 ];

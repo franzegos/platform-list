@@ -24,4 +24,11 @@ export const depositService: ServiceRaw = {
   contractsRaw: [contract],
 };
 
-export const services: ServiceRaw[] = [depositService];
+export const withdrawService: ServiceRaw = {
+  id: `${platform.id}-withdraw`,
+  name: "Withdraw",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const services: ServiceRaw[] = [depositService, withdrawService];

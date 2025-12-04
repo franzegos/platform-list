@@ -16,7 +16,7 @@ export const platform: PlatformRaw = {
   tokens: ["BANXbTpN8U2cU41FjPxe2Ti37PiT5cCxLUKDQZuJeMMR"],
 };
 
-const bondsContract = {
+export const bondsContract = {
   name: "Banx Bonds",
   address: "4tdmkuY6EStxbS6Y8s5ueznL3VPMSugrvQuDeAHGZhSt",
   networkId: NetworkId.solana,

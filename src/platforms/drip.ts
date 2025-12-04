@@ -12,4 +12,18 @@ export const platform: PlatformRaw = {
   tags: ["nft-marketplace", "dapp"],
 };
 
-export const services: ServiceRaw[] = [];
+export const collectingService: ServiceRaw = {
+  id: `${platform.id}-collecting`,
+  name: "Collecting",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const creatorRewardsService: ServiceRaw = {
+  id: `${platform.id}-creator-rewards`,
+  name: "Creator Rewards",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const services: ServiceRaw[] = [collectingService, creatorRewardsService];

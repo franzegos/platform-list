@@ -79,8 +79,24 @@ export const tbtcBridgeService: ServiceRaw = {
   contractsRaw: [tbtcBridgeContract],
 };
 
+export const coreService: ServiceRaw = {
+  id: `${platform.id}-core`,
+  name: "Core",
+  platformId: platform.id,
+  contractsRaw: [coreContract, mainContract],
+};
+
+export const tokenBridgeService: ServiceRaw = {
+  id: `${platform.id}-token-bridge`,
+  name: "Token Bridge",
+  platformId: platform.id,
+  contractsRaw: [tokenBridgeContract, tokenBridgeRelayerContract],
+};
+
 export const services: ServiceRaw[] = [
   legacyStakingService,
   stakingService,
   tbtcBridgeService,
+  coreService,
+  tokenBridgeService,
 ];

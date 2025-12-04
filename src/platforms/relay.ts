@@ -22,7 +22,7 @@ const relayContract = {
   networkId: NetworkId.solana,
 };
 
-export const service: ServiceRaw = {
+export const bridgeService: ServiceRaw = {
   id: `${platform.id}-bridge`,
   name: "Bridge",
   platformId: platform.id,
@@ -36,4 +36,4 @@ export const relayService: ServiceRaw = {
   contractsRaw: [relayContract],
 };
 
-export const services: ServiceRaw[] = [service, relayService];
+export const services: ServiceRaw[] = [bridgeService, relayService];

@@ -45,4 +45,15 @@ export const airdropService: ServiceRaw = {
   contractsRaw: [airdropContract],
 };
 
-export const services: ServiceRaw[] = [service, airdropService];
+export const nativeStakeService: ServiceRaw = {
+  id: `${platform.id}-native-stake`,
+  name: "Native Stake",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const services: ServiceRaw[] = [
+  service,
+  airdropService,
+  nativeStakeService,
+];

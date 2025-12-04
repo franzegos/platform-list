@@ -54,6 +54,48 @@ export const singleValidatorStakePoolService: ServiceRaw = {
   contractsRaw: [singleValidatorStakePoolContract],
 };
 
+export const closeAccountService: ServiceRaw = {
+  id: `${platform.id}-close-account`,
+  name: "Close Token Account",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const createAccountService: ServiceRaw = {
+  id: `${platform.id}-create-account`,
+  name: "Create Token Account",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const addressLookupTableService: ServiceRaw = {
+  id: `${platform.id}-address-lookup-table`,
+  name: "Address Lookup Table",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const transferService: ServiceRaw = {
+  id: `${platform.id}-transfer`,
+  name: "Transfer",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const burnService: ServiceRaw = {
+  id: `${platform.id}-burn`,
+  name: "Burn",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const delegateService: ServiceRaw = {
+  id: `${platform.id}-delegate`,
+  name: "Delegate",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
 export {
   solanaStakingContract,
   solanaStakePoolContract,
@@ -64,4 +106,10 @@ export const services: ServiceRaw[] = [
   stakingService,
   stakePoolService,
   singleValidatorStakePoolService,
+  closeAccountService,
+  createAccountService,
+  addressLookupTableService,
+  transferService,
+  burnService,
+  delegateService,
 ];

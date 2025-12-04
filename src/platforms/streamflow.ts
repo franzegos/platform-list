@@ -17,7 +17,7 @@ export const platform: PlatformRaw = {
   tokens: ["STREAMribRwybYpMmSYoCsQUdr6MZNXEqHgm7p1gu9M"],
 };
 
-const vestingContract = {
+export const vestingContract = {
   name: "Vesting",
   address: "strmRqUCoQUgGUan5YhzUZa6KqdzwX5L6FpUxfmKg5m",
   networkId: NetworkId.solana,

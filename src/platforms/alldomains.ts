@@ -33,11 +33,18 @@ const nameHouseContract = {
   networkId: NetworkId.solana,
 };
 
-export const nameHouseService: ServiceRaw = {
+const nameHouseService: ServiceRaw = {
   id: `${platform.id}-name-house`,
   name: "Name House",
   platformId: platform.id,
   contractsRaw: [nameHouseContract],
 };
 
-export const services: ServiceRaw[] = [nameHouseService];
+export const nameService: ServiceRaw = {
+  id: `${platform.id}-name-service`,
+  name: "Name Service",
+  platformId: platform.id,
+  contractsRaw: [contract, coSignerContract],
+};
+
+export const services: ServiceRaw[] = [nameHouseService, nameService];

@@ -15,7 +15,7 @@ export const platform: PlatformRaw = {
   tags: ["dapp"],
 };
 
-export const kaminoLendContract = {
+export const lendContract = {
   name: "Kamino Lend",
   address: "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
   networkId: NetworkId.solana,
@@ -27,19 +27,19 @@ const poolsContract = {
   networkId: NetworkId.solana,
 };
 
-const kaminoFarmContract = {
+const farmContract = {
   name: "Kamino Farm",
   address: "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr",
   networkId: NetworkId.solana,
 };
 
-const limitOrderContract = {
+export const limitOrderContract = {
   name: "Kamino Limit Order",
   address: "LiMoM9rMhrdYrfzUCxQppvxCSG1FcrUK9G8uLq4A1GF",
   networkId: NetworkId.solana,
 };
 
-const vaultContract = {
+export const vaultContract = {
   name: "Kamino Vault",
   address: "KvauGMspG5k6rtzrqqn7WNn3oZdyKqLKwK2XWQ8FLjd",
   networkId: NetworkId.solana,
@@ -70,14 +70,21 @@ export const scopePriceService: ServiceRaw = {
   contractsRaw: [scopePriceContract],
 };
 
-export const kaminoLendingService: ServiceRaw = {
+export const lendService: ServiceRaw = {
   id: `${platform.id}-lend`,
   name: "Lending",
   platformId: platform.id,
-  contractsRaw: [kaminoLendContract],
+  contractsRaw: [lendContract],
 };
 
-export const kaminoLimitOrderService: ServiceRaw = {
+export const multiplyService: ServiceRaw = {
+  id: `${platform.id}-multiply`,
+  name: "Multiply",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const limitOrderService: ServiceRaw = {
   id: `${platform.id}-limit-order`,
   name: "Limit Order",
   platformId: platform.id,
@@ -91,11 +98,18 @@ export const swapService: ServiceRaw = {
   contractsRaw: [],
 };
 
-export const kaminoLiquidityService: ServiceRaw = {
+export const liquidityService: ServiceRaw = {
   id: `${platform.id}-liquidity`,
   name: "Liquidity",
   platformId: platform.id,
-  contractsRaw: [poolsContract, kaminoFarmContract],
+  contractsRaw: [poolsContract, vaultContract],
+};
+
+const farmService: ServiceRaw = {
+  id: `${platform.id}-farm`,
+  name: "Farm",
+  platformId: platform.id,
+  contractsRaw: [farmContract],
 };
 
 export const vaultLeverageService: ServiceRaw = {
@@ -114,10 +128,12 @@ export const airdropService: ServiceRaw = {
 
 export const services: ServiceRaw[] = [
   scopePriceService,
-  kaminoLendingService,
-  kaminoLimitOrderService,
+  lendService,
+  multiplyService,
+  limitOrderService,
   swapService,
-  kaminoLiquidityService,
+  liquidityService,
+  farmService,
   vaultLeverageService,
   airdropService,
 ];

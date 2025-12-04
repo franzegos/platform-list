@@ -1,4 +1,4 @@
-import { PlatformRaw, ServiceRaw } from "../types";
+import { NetworkId, PlatformRaw, ServiceRaw } from "../types";
 export const platform: PlatformRaw = {
   id: "sns",
   name: "SNS",
@@ -16,4 +16,29 @@ export const platform: PlatformRaw = {
   tokens: ["EchesyfXePKdLtoiZSL8pBe8Myagyy8ZRqsACNCFGnvp"],
 };
 
-export const services: ServiceRaw[] = [];
+const recordContract = {
+  name: "Records Program",
+  address: "HP3D4D1ZCmohQGFVms2SS4LCANgJyksBf5s1F77FuFjZ",
+  networkId: NetworkId.solana,
+};
+
+const nameServiceContract = {
+  name: "Name Service",
+  address: "namesLPneVptA9Z5rqUDD9tMTWEJwofgaYwp8cawRkX",
+  networkId: NetworkId.solana,
+};
+
+const registrarContract = {
+  name: "Registrar",
+  address: "jCebN34bUfdeUYJT13J1yG16XWQpt5PDx6Mse9GUqhR",
+  networkId: NetworkId.solana,
+};
+
+export const mainService: ServiceRaw = {
+  id: `${platform.id}-domaine-name`,
+  name: "Name Service",
+  platformId: platform.id,
+  contractsRaw: [nameServiceContract, registrarContract, recordContract],
+};
+
+export const services: ServiceRaw[] = [mainService];

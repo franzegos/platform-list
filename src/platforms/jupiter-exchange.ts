@@ -122,6 +122,18 @@ const inviteContract = {
   networkId: NetworkId.solana,
 };
 
+const lendVaultsContract = {
+  name: "Lend Vaults",
+  address: "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi",
+  networkId: NetworkId.solana,
+};
+
+export const lendContract = {
+  name: "Lend",
+  address: "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9",
+  networkId: NetworkId.solana,
+};
+
 export const swapV7Service: ServiceRaw = {
   id: `${platform.id}-swap-v7`,
   name: "Swap v7",
@@ -171,6 +183,13 @@ export const swapV1Service: ServiceRaw = {
   contractsRaw: [jupiterV1Contract],
 };
 
+export const gaslessSwapService: ServiceRaw = {
+  id: `${platform.id}-gasless-swap`,
+  name: "Gasless Swap",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
 export const apeService: ServiceRaw = {
   id: `${platform.id}-ape`,
   name: "Ape",
@@ -183,6 +202,13 @@ export const jupiterZService: ServiceRaw = {
   name: "JupiterZ",
   platformId: platform.id,
   contractsRaw: [rfqContract],
+};
+
+export const limitV2Service: ServiceRaw = {
+  id: `${platform.id}-limit-v2`,
+  name: "Limit v2",
+  platformId: platform.id,
+  contractsRaw: [],
 };
 
 export const limitV1Service: ServiceRaw = {
@@ -204,6 +230,13 @@ export const dcaService: ServiceRaw = {
   name: "DCA",
   platformId: platform.id,
   contractsRaw: [jupiterDcaContract],
+};
+
+export const dcaDepositService: ServiceRaw = {
+  id: `${platform.id}-dca-deposit`,
+  name: "DCA",
+  platformId: platform.id,
+  contractsRaw: [],
 };
 
 export const dcaVaService: ServiceRaw = {
@@ -241,6 +274,13 @@ export const inviteService: ServiceRaw = {
   contractsRaw: [inviteContract],
 };
 
+export const lendService: ServiceRaw = {
+  id: `${platform.id}-lend`,
+  name: "Lend",
+  platformId: platform.id,
+  contractsRaw: [lendContract, lendVaultsContract],
+};
+
 export const services: ServiceRaw[] = [
   swapV7Service,
   swapV6Service,
@@ -249,14 +289,18 @@ export const services: ServiceRaw[] = [
   swapV3Service,
   swapV2Service,
   swapV1Service,
+  gaslessSwapService,
   apeService,
   jupiterZService,
+  limitV2Service,
   limitV1Service,
   limitService,
   dcaService,
+  dcaDepositService,
   dcaVaService,
   lockService,
   perpsService,
   airdropService,
   inviteService,
+  lendService,
 ];

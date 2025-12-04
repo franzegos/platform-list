@@ -9,4 +9,11 @@ export const platform: PlatformRaw = {
   },
   tags: ["dapp"],
 };
-export const services: ServiceRaw[] = [];
+export const tradeService: ServiceRaw = {
+  id: `${platform.id}`,
+  name: "Trade",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const services: ServiceRaw[] = [tradeService];

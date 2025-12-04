@@ -46,4 +46,11 @@ export const launchpadService: ServiceRaw = {
   contractsRaw: [launchpadContract],
 };
 
-export const services: ServiceRaw[] = [launchpadService];
+export const decisionMarketService: ServiceRaw = {
+  id: "futarchy-decision-market",
+  name: "Decision Market",
+  platformId: platform.id,
+  contractsRaw: [contract, conditionalContract, ammContract],
+};
+
+export const services: ServiceRaw[] = [launchpadService, decisionMarketService];

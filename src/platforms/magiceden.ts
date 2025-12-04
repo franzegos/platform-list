@@ -104,6 +104,13 @@ export const ammService: ServiceRaw = {
   contractsRaw: [ammContract],
 };
 
+export const airdropService: ServiceRaw = {
+  id: `${platform.id}-airdrop`,
+  name: "Airdrop",
+  platformId: platform.id,
+  contractsRaw: [airdropContract, distributionContract],
+};
+
 export const services: ServiceRaw[] = [
   escrowService,
   stakingService,
@@ -111,4 +118,5 @@ export const services: ServiceRaw[] = [
   cnftService,
   launchpadService,
   ammService,
+  airdropService,
 ];

@@ -58,8 +58,16 @@ export const airdropService: ServiceRaw = {
   contractsRaw: [airdropContract],
 };
 
+export const tipService: ServiceRaw = {
+  id: `${platform.id}-tip`,
+  name: "Tip",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
 export const services: ServiceRaw[] = [
   service,
   restakingService,
   airdropService,
+  tipService,
 ];

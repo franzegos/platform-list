@@ -12,4 +12,11 @@ export const platform: PlatformRaw = {
     "Quickly launch tokens by replying to any tweet with @launchcoin +name to turn it into a coin.",
 };
 
-export const services: ServiceRaw[] = [];
+export const launchService: ServiceRaw = {
+  id: `${platform.id}-launch`,
+  name: "Launchacoin",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
+export const services: ServiceRaw[] = [launchService];

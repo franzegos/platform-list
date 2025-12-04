@@ -41,7 +41,15 @@ export const v2WithJupiterSwapService: ServiceRaw = {
   contractsRaw: [contractV2],
 };
 
+export const leverageService: ServiceRaw = {
+  id: `${platform.id}-leverage`,
+  name: "Leverage",
+  platformId: platform.id,
+  contractsRaw: [],
+};
+
 export const services: ServiceRaw[] = [
   withJupiterSwapService,
   v2WithJupiterSwapService,
+  leverageService,
 ];
