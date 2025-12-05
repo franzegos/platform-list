@@ -4,7 +4,7 @@ export const platform: PlatformRaw = {
   id: "yawww",
   name: "Yawww",
   links: {
-    website: "",
+    website: "https://x.com/yawwwnft",
     twitter: "https://x.com/yawwwnft",
   },
   tags: ["dapp"],

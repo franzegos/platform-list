@@ -4,7 +4,7 @@ export const platform: PlatformRaw = {
   id: "katana",
   name: "Katana",
   links: {
-    website: "",
+    website: "https://katana.so/",
   },
   tags: ["dapp"],
   isDeprecated: true,

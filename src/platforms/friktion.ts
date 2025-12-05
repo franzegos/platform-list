@@ -4,7 +4,7 @@ export const platform: PlatformRaw = {
   id: "friktion",
   name: "Friktion",
   links: {
-    website: "",
+    website: "https://github.com/Friktion-Labs",
     github: "https://github.com/Friktion-Labs",
   },
   tags: ["dapp"],

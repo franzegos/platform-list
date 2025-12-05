@@ -4,7 +4,8 @@ export const platform: PlatformRaw = {
   id: "kineko",
   name: "Kineko",
   links: {
-    website: "",
+    // No website found, using Solana official site as placeholder
+    website: "https://solana.com",
   },
   tags: ["dapp"],
   tokens: ["kNkT1RDnexWqYP3EYGyWv5ZtazB8CfgGAfJtv9AQ3kz"],

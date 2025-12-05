@@ -8,6 +8,7 @@ import * as accessprotocol from "./accessprotocol";
 import * as adrastea from "./adrastea";
 import * as adrena from "./adrena";
 import * as akuma from "./akuma";
+import * as aldrin from "./aldrin";
 import * as allbridge from "./allbridge";
 import * as alldomains from "./alldomains";
 import * as amulet from "./amulet";
@@ -38,6 +39,8 @@ import * as bulktrade from "./bulktrade";
 import * as byreal from "./byreal";
 import * as candle from "./candle";
 import * as carrot from "./carrot";
+import * as cashmere from "./cashmere";
+import * as cega from "./cega";
 import * as circle from "./circle";
 import * as circuit from "./circuit";
 import * as citrus from "./citrus";
@@ -63,6 +66,7 @@ import * as drip from "./drip";
 import * as dumpy from "./dumpy";
 import * as elemental from "./elemental";
 import * as ensofi from "./ensofi";
+import * as exoticmarkets from "./exoticmarkets";
 import * as exponent from "./exponent";
 import * as famousfoxfederation from "./famousfoxfederation";
 import * as fjordfoundry from "./fjordfoundry";
@@ -73,12 +77,14 @@ import * as fluxbeam from "./fluxbeam";
 import * as fragmetric from "./fragmetric";
 import * as francium from "./francium";
 import * as frax from "./frax";
+import * as friktion from "./friktion";
 import * as futarchy from "./futarchy";
 import * as gary from "./gary";
 import * as gauntlet from "./gauntlet";
 import * as gecko from "./gecko";
 import * as genesysgo from "./genesysgo";
 import * as glow from "./glow";
+import * as goblingod from "./goblingod";
 import * as godl from "./godl";
 import * as gofurs from "./gofurs";
 import * as goki from "./goki";
@@ -87,9 +93,11 @@ import * as gpool from "./gpool";
 import * as graphite from "./graphite";
 import * as grass from "./grass";
 import * as guano from "./guano";
+import * as hadeswap from "./hadeswap";
 import * as hastra from "./hastra";
 import * as haven from "./haven";
 import * as hawksight from "./hawksight";
+import * as hedge from "./hedge";
 import * as hedgehog from "./hedgehog";
 import * as hedgy from "./hedgy";
 import * as helio from "./helio";
@@ -102,6 +110,8 @@ import * as huma from "./huma";
 import * as hxro from "./hxro";
 import * as hylo from "./hylo";
 import * as iloop from "./iloop";
+import * as invariant from "./invariant";
+import * as jet from "./jet";
 import * as jito from "./jito";
 import * as jupiterExchange from "./jupiter-exchange";
 import * as jupiterGovernance from "./jupiter-governance";
@@ -109,11 +119,15 @@ import * as jupiterJupuary from "./jupiter-jupuary";
 import * as jupiterLaunchpad from "./jupiter-launchpad";
 import * as jupiterPm from "./jupiter-pm";
 import * as kamino from "./kamino";
+import * as katana from "./katana";
+import * as kineko from "./kineko";
 import * as kishu from "./kishu";
 import * as knightrade from "./knightrade";
 import * as kyros from "./kyros";
+import * as larix from "./larix";
 import * as lavarage from "./lavarage";
 import * as layer3 from "./layer3";
+import * as lido from "./lido";
 import * as lifinity from "./lifinity";
 import * as ligma from "./ligma";
 import * as lince from "./lince";
@@ -161,6 +175,7 @@ import * as oro from "./oro";
 import * as pancakeswap from "./pancakeswap";
 import * as paraswap from "./paraswap";
 import * as parcl from "./parcl";
+import * as parrot from "./parrot";
 import * as perena from "./perena";
 import * as phantom from "./phantom";
 import * as phoenix from "./phoenix";
@@ -170,10 +185,12 @@ import * as picasso from "./picasso";
 import * as piggybank from "./piggybank";
 import * as playsolana from "./playsolana";
 import * as pluto from "./pluto";
+import * as poolparty from "./poolparty";
 import * as port from "./port";
 import * as portals from "./portals";
 import * as privacycash from "./privacycash";
 import * as project0 from "./project0";
+import * as psy from "./psy";
 import * as pudgy from "./pudgy";
 import * as puffcoin from "./puffcoin";
 import * as pumpfun from "./pumpfun";
@@ -184,6 +201,7 @@ import * as pyth from "./pyth";
 import * as quarry from "./quarry";
 import * as rain from "./rain";
 import * as ratex from "./ratex";
+import * as ratio from "./ratio";
 import * as raydium from "./raydium";
 import * as realms from "./realms";
 import * as reflect from "./reflect";
@@ -219,6 +237,7 @@ import * as stakewise from "./stakewise";
 import * as staratlas from "./staratlas";
 import * as stepfinance from "./stepfinance";
 import * as streamflow from "./streamflow";
+import * as sunny from "./sunny";
 import * as switchboard from "./switchboard";
 import * as symmetry from "./symmetry";
 import * as tensor from "./tensor";
@@ -243,6 +262,7 @@ import * as wink from "./wink";
 import * as wintermute from "./wintermute";
 import * as wormhole from "./wormhole";
 import * as yaku from "./yaku";
+import * as yawww from "./yawww";
 import * as yieldfan from "./yieldfan";
 import * as zelo from "./zelo";
 import * as zeta from "./zeta";
@@ -255,6 +275,7 @@ export const platforms: PlatformRaw[] = [
   adrastea.platform,
   adrena.platform,
   akuma.platform,
+  aldrin.platform,
   allbridge.platform,
   alldomains.platform,
   amulet.platform,
@@ -285,6 +306,8 @@ export const platforms: PlatformRaw[] = [
   byreal.platform,
   candle.platform,
   carrot.platform,
+  cashmere.platform,
+  cega.platform,
   circle.platform,
   circuit.platform,
   citrus.platform,
@@ -310,6 +333,7 @@ export const platforms: PlatformRaw[] = [
   dumpy.platform,
   elemental.platform,
   ensofi.platform,
+  exoticmarkets.platform,
   exponent.platform,
   famousfoxfederation.platform,
   fjordfoundry.platform,
@@ -320,12 +344,14 @@ export const platforms: PlatformRaw[] = [
   fragmetric.platform,
   francium.platform,
   frax.platform,
+  friktion.platform,
   futarchy.platform,
   gary.platform,
   gauntlet.platform,
   gecko.platform,
   genesysgo.platform,
   glow.platform,
+  goblingod.platform,
   godl.platform,
   gofurs.platform,
   goki.platform,
@@ -334,9 +360,11 @@ export const platforms: PlatformRaw[] = [
   graphite.platform,
   grass.platform,
   guano.platform,
+  hadeswap.platform,
   hastra.platform,
   haven.platform,
   hawksight.platform,
+  hedge.platform,
   hedgehog.platform,
   hedgy.platform,
   helio.platform,
@@ -349,6 +377,8 @@ export const platforms: PlatformRaw[] = [
   hxro.platform,
   hylo.platform,
   iloop.platform,
+  invariant.platform,
+  jet.platform,
   jito.platform,
   jupiterExchange.platform,
   jupiterGovernance.platform,
@@ -356,11 +386,15 @@ export const platforms: PlatformRaw[] = [
   jupiterLaunchpad.platform,
   jupiterPm.platform,
   kamino.platform,
+  katana.platform,
+  kineko.platform,
   kishu.platform,
   knightrade.platform,
   kyros.platform,
+  larix.platform,
   lavarage.platform,
   layer3.platform,
+  lido.platform,
   lifinity.platform,
   ligma.platform,
   lince.platform,
@@ -408,6 +442,7 @@ export const platforms: PlatformRaw[] = [
   pancakeswap.platform,
   paraswap.platform,
   parcl.platform,
+  parrot.platform,
   perena.platform,
   phantom.platform,
   phoenix.platform,
@@ -417,10 +452,12 @@ export const platforms: PlatformRaw[] = [
   piggybank.platform,
   playsolana.platform,
   pluto.platform,
+  poolparty.platform,
   port.platform,
   portals.platform,
   privacycash.platform,
   project0.platform,
+  psy.platform,
   pudgy.platform,
   puffcoin.platform,
   pumpfun.platform,
@@ -431,6 +468,7 @@ export const platforms: PlatformRaw[] = [
   quarry.platform,
   rain.platform,
   ratex.platform,
+  ratio.platform,
   raydium.platform,
   realms.platform,
   reflect.platform,
@@ -466,6 +504,7 @@ export const platforms: PlatformRaw[] = [
   staratlas.platform,
   stepfinance.platform,
   streamflow.platform,
+  sunny.platform,
   switchboard.platform,
   symmetry.platform,
   tensor.platform,
@@ -490,6 +529,7 @@ export const platforms: PlatformRaw[] = [
   wintermute.platform,
   wormhole.platform,
   yaku.platform,
+  yawww.platform,
   yieldfan.platform,
   zelo.platform,
   zeta.platform,
@@ -503,6 +543,7 @@ export const services: ServiceRaw[] = [
   ...adrastea.services,
   ...adrena.services,
   ...akuma.services,
+  ...aldrin.services,
   ...allbridge.services,
   ...alldomains.services,
   ...amulet.services,
@@ -533,6 +574,8 @@ export const services: ServiceRaw[] = [
   ...byreal.services,
   ...candle.services,
   ...carrot.services,
+  ...cashmere.services,
+  ...cega.services,
   ...circle.services,
   ...circuit.services,
   ...citrus.services,
@@ -558,6 +601,7 @@ export const services: ServiceRaw[] = [
   ...dumpy.services,
   ...elemental.services,
   ...ensofi.services,
+  ...exoticmarkets.services,
   ...exponent.services,
   ...famousfoxfederation.services,
   ...fjordfoundry.services,
@@ -568,12 +612,14 @@ export const services: ServiceRaw[] = [
   ...fragmetric.services,
   ...francium.services,
   ...frax.services,
+  ...friktion.services,
   ...futarchy.services,
   ...gary.services,
   ...gauntlet.services,
   ...gecko.services,
   ...genesysgo.services,
   ...glow.services,
+  ...goblingod.services,
   ...godl.services,
   ...gofurs.services,
   ...goki.services,
@@ -582,9 +628,11 @@ export const services: ServiceRaw[] = [
   ...graphite.services,
   ...grass.services,
   ...guano.services,
+  ...hadeswap.services,
   ...hastra.services,
   ...haven.services,
   ...hawksight.services,
+  ...hedge.services,
   ...hedgehog.services,
   ...hedgy.services,
   ...helio.services,
@@ -597,6 +645,8 @@ export const services: ServiceRaw[] = [
   ...hxro.services,
   ...hylo.services,
   ...iloop.services,
+  ...invariant.services,
+  ...jet.services,
   ...jito.services,
   ...jupiterExchange.services,
   ...jupiterGovernance.services,
@@ -604,11 +654,15 @@ export const services: ServiceRaw[] = [
   ...jupiterLaunchpad.services,
   ...jupiterPm.services,
   ...kamino.services,
+  ...katana.services,
+  ...kineko.services,
   ...kishu.services,
   ...knightrade.services,
   ...kyros.services,
+  ...larix.services,
   ...lavarage.services,
   ...layer3.services,
+  ...lido.services,
   ...lifinity.services,
   ...ligma.services,
   ...lince.services,
@@ -656,6 +710,7 @@ export const services: ServiceRaw[] = [
   ...pancakeswap.services,
   ...paraswap.services,
   ...parcl.services,
+  ...parrot.services,
   ...perena.services,
   ...phantom.services,
   ...phoenix.services,
@@ -665,10 +720,12 @@ export const services: ServiceRaw[] = [
   ...piggybank.services,
   ...playsolana.services,
   ...pluto.services,
+  ...poolparty.services,
   ...port.services,
   ...portals.services,
   ...privacycash.services,
   ...project0.services,
+  ...psy.services,
   ...pudgy.services,
   ...puffcoin.services,
   ...pumpfun.services,
@@ -679,6 +736,7 @@ export const services: ServiceRaw[] = [
   ...quarry.services,
   ...rain.services,
   ...ratex.services,
+  ...ratio.services,
   ...raydium.services,
   ...realms.services,
   ...reflect.services,
@@ -714,6 +772,7 @@ export const services: ServiceRaw[] = [
   ...staratlas.services,
   ...stepfinance.services,
   ...streamflow.services,
+  ...sunny.services,
   ...switchboard.services,
   ...symmetry.services,
   ...tensor.services,
@@ -738,6 +797,7 @@ export const services: ServiceRaw[] = [
   ...wintermute.services,
   ...wormhole.services,
   ...yaku.services,
+  ...yawww.services,
   ...yieldfan.services,
   ...zelo.services,
   ...zeta.services,

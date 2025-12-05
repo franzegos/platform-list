@@ -4,7 +4,7 @@ export const platform: PlatformRaw = {
   id: "psy",
   name: "Psy Finance",
   links: {
-    website: "",
+    website: "https://x.com/PsyOptions",
     twitter: "https://x.com/PsyOptions",
   },
   tags: ["dapp"],

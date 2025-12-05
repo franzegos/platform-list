@@ -1,10 +1,10 @@
 import { NetworkId, PlatformRaw } from "../types";
 
 export const platform: PlatformRaw = {
-  id: "friktion",
-  name: "Friktion",
+  id: "goblingod",
+  name: "GoblinGod",
   links: {
-    website: "",
+    website: "https://x.com/goblingold_fi",
     twitter: "https://x.com/goblingold_fi",
   },
   tags: ["dapp"],
