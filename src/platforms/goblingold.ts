@@ -1,8 +1,8 @@
 import { NetworkId, PlatformRaw } from "../types";
 
 export const platform: PlatformRaw = {
-  id: "goblingod",
-  name: "GoblinGod",
+  id: "goblingold",
+  name: "GoblinGold",
   links: {
     website: "https://x.com/goblingold_fi",
     twitter: "https://x.com/goblingold_fi",
