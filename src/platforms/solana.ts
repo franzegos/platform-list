@@ -110,8 +110,7 @@ export const createAccountService: ServiceRaw = {
   name: "Create Token Account",
   platformId: platform.id,
   contractsRaw: [],
-  description:
-    "Associated token account creation for holding SPL tokens.",
+  description: "Associated token account creation for holding SPL tokens.",
 };
 
 export const addressLookupTableService: ServiceRaw = {
@@ -128,8 +127,7 @@ export const transferService: ServiceRaw = {
   name: "Transfer",
   platformId: platform.id,
   contractsRaw: [],
-  description:
-    "Native SOL and SPL token transfers between accounts.",
+  description: "Native SOL and SPL token transfers between accounts.",
 };
 
 export const burnService: ServiceRaw = {
@@ -137,8 +135,7 @@ export const burnService: ServiceRaw = {
   name: "Burn",
   platformId: platform.id,
   contractsRaw: [],
-  description:
-    "Token burning permanently removing tokens from circulation.",
+  description: "Token burning permanently removing tokens from circulation.",
 };
 
 export const delegateService: ServiceRaw = {
