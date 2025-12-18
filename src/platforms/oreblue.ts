@@ -1,15 +1,15 @@
 import { PlatformRaw, ServiceRaw, NetworkId } from "../types";
 export const platform: PlatformRaw = {
   id: "oreblue",
-  name: "ORE Blue",
+  name: "ZORB",
   description:
-    "ORE Blue is a proof-of-work mining platform, a variant of the ORE mining ecosystem.",
+    "ZORB is a proof-of-work mining platform, a variant of the ORE mining ecosystem.",
   tags: ["tool"],
   links: {
-    website: "https://ore.blue/",
+    website: "https://zorb.supply/",
     discord: "https://discord.com/invite/69uxav4fe4",
-    twitter: "https://x.com/OREdotblue",
-    documentation: "https://ore.blue/about",
+    twitter: "https://x.com/ZORBsupply",
+    documentation: "https://zorb.supply/about",
   },
   tokens: ["orebyr4mDiPDVgnfqvF5xiu5gKnh94Szuz8dqgNqdJn"],
 };
