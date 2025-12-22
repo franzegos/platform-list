@@ -68,14 +68,14 @@ export const apeContract = {
   networkId: NetworkId.solana,
 };
 
-export const jupiterLimitV1Contract = {
-  name: "Limit v1",
+export const jupiterLimitContract = {
+  name: "Limit",
   address: "jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu",
   networkId: NetworkId.solana,
 };
 
-export const jupiterLimitContract = {
-  name: "Limit",
+export const jupiterLimitV1Contract = {
+  name: "Limit V1",
   address: "j1o2qRpjcyUwEvwtcfhEQefh773ZgjxcVRry7LDqg5X",
   networkId: NetworkId.solana,
 };
@@ -233,30 +233,31 @@ export const jupiterZService: ServiceRaw = {
     "JupiterZ is a request-for-quote (RFQ) service that enables users to obtain personalized trade quotes for large or complex transactions, ensuring optimal pricing and execution through direct negotiation with liquidity providers.",
 };
 
-export const limitV2Service: ServiceRaw = {
-  id: `${platform.id}-limit-v2`,
-  name: "Limit v2",
-  platformId: platform.id,
-  contractsRaw: [],
-  description:
-    "The limit order service allows users to set limit orders for token swaps, enabling them to specify the desired price at which they want to buy or sell a cryptocurrency. This service enhances trading flexibility and control over execution prices.",
-  link: "https://jup.ag/?tab=limit",
-};
-
-export const limitV1Service: ServiceRaw = {
-  id: `${platform.id}-limitv1`,
-  name: "Limit v1",
-  platformId: platform.id,
-  contractsRaw: [jupiterLimitV1Contract],
-};
-
 export const limitService: ServiceRaw = {
   id: `${platform.id}-limit`,
   name: "Limit",
   platformId: platform.id,
   contractsRaw: [jupiterLimitContract],
+};
+
+export const limitV1Service: ServiceRaw = {
+  id: `${platform.id}-limit-v1`,
+  name: "Limit V1",
+  platformId: platform.id,
+  contractsRaw: [jupiterLimitV1Contract],
   description:
     "Limit order execution engine filling orders when market prices match specified targets.",
+  link: "https://jup.ag/?tab=limit",
+};
+
+export const limitV2Service: ServiceRaw = {
+  id: `${platform.id}-limit-v2`,
+  name: "Limit V2",
+  platformId: platform.id,
+  contractsRaw: [],
+  description:
+    "The limit order service allows users to set limit orders for token swaps, enabling them to specify the desired price at which they want to buy or sell a cryptocurrency. This service enhances trading flexibility and control over execution prices.",
+  link: "https://jup.ag/?tab=limit",
 };
 
 export const dcaService: ServiceRaw = {
@@ -353,9 +354,9 @@ export const services: ServiceRaw[] = [
   manualSwapService,
   apeService,
   jupiterZService,
-  limitV2Service,
-  limitV1Service,
   limitService,
+  limitV1Service,
+  limitV2Service,
   dcaService,
   dcaDepositService,
   dcaVaService,
