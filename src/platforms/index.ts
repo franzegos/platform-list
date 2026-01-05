@@ -47,6 +47,7 @@ import * as circle from "./circle";
 import * as circuit from "./circuit";
 import * as citrus from "./citrus";
 import * as claimyoursols from "./claimyoursols";
+import * as claynosaurz from "./claynosaurz";
 import * as clone from "./clone";
 import * as coinmarketcap from "./coinmarketcap";
 import * as cropper from "./cropper";
@@ -57,6 +58,7 @@ import * as cytonic from "./cytonic";
 import * as debridge from "./debridge";
 import * as defiland from "./defiland";
 import * as defituna from "./defituna";
+import * as degenapeacademy from "./degenapeacademy";
 import * as degencoinflip from "./degencoinflip";
 import * as degods from "./degods";
 import * as dflow from "./dflow";
@@ -166,6 +168,7 @@ import * as nirvana from "./nirvana";
 import * as nodepay from "./nodepay";
 import * as nosana from "./nosana";
 import * as nxfinance from "./nxfinance";
+import * as okaybears from "./okaybears";
 import * as okx from "./okx";
 import * as omni from "./omni";
 import * as ondoFinance from "./ondo-finance";
@@ -268,6 +271,7 @@ import * as whalesmarket from "./whalesmarket";
 import * as wink from "./wink";
 import * as wintermute from "./wintermute";
 import * as wormhole from "./wormhole";
+import * as y00ts from "./y00ts";
 import * as yaku from "./yaku";
 import * as yawww from "./yawww";
 import * as yieldfan from "./yieldfan";
@@ -321,6 +325,7 @@ export const platforms: PlatformRaw[] = [
   circuit.platform,
   citrus.platform,
   claimyoursols.platform,
+  claynosaurz.platform,
   clone.platform,
   coinmarketcap.platform,
   cropper.platform,
@@ -331,6 +336,7 @@ export const platforms: PlatformRaw[] = [
   debridge.platform,
   defiland.platform,
   defituna.platform,
+  degenapeacademy.platform,
   degencoinflip.platform,
   degods.platform,
   dflow.platform,
@@ -440,6 +446,7 @@ export const platforms: PlatformRaw[] = [
   nodepay.platform,
   nosana.platform,
   nxfinance.platform,
+  okaybears.platform,
   okx.platform,
   omni.platform,
   ondoFinance.platform,
@@ -542,6 +549,7 @@ export const platforms: PlatformRaw[] = [
   wink.platform,
   wintermute.platform,
   wormhole.platform,
+  y00ts.platform,
   yaku.platform,
   yawww.platform,
   yieldfan.platform,
@@ -596,6 +604,7 @@ export const services: ServiceRaw[] = [
   ...circuit.services,
   ...citrus.services,
   ...claimyoursols.services,
+  ...claynosaurz.services,
   ...clone.services,
   ...coinmarketcap.services,
   ...cropper.services,
@@ -606,6 +615,7 @@ export const services: ServiceRaw[] = [
   ...debridge.services,
   ...defiland.services,
   ...defituna.services,
+  ...degenapeacademy.services,
   ...degencoinflip.services,
   ...degods.services,
   ...dflow.services,
@@ -715,6 +725,7 @@ export const services: ServiceRaw[] = [
   ...nodepay.services,
   ...nosana.services,
   ...nxfinance.services,
+  ...okaybears.services,
   ...okx.services,
   ...omni.services,
   ...ondoFinance.services,
@@ -817,6 +828,7 @@ export const services: ServiceRaw[] = [
   ...wink.services,
   ...wintermute.services,
   ...wormhole.services,
+  ...y00ts.services,
   ...yaku.services,
   ...yawww.services,
   ...yieldfan.services,
