@@ -16,7 +16,7 @@ export const platform: PlatformRaw = {
 
 const v3Contract = {
   name: "V3",
-  address: "mineWsRs2Rmw2jPMkVbgAbDjV1E23yQ8TEodaX3iza4",
+  address: "chopmfFa3T1CzZj9WUgq5e18aMvjufSHGfPTvyKkydL",
   networkId: NetworkId.solana,
 };
 
