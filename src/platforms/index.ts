@@ -17,6 +17,7 @@ import * as artrade from "./artrade";
 import * as asgardfi from "./asgardfi";
 import * as atrix from "./atrix";
 import * as aurory from "./aurory";
+import * as backpack from "./backpack";
 import * as backwoods from "./backwoods";
 import * as bananagun from "./bananagun";
 import * as banger from "./banger";
@@ -227,6 +228,7 @@ import * as solanaid from "./solanaid";
 import * as solanart from "./solanart";
 import * as solayer from "./solayer";
 import * as solcasino from "./solcasino";
+import * as solflare from "./solflare";
 import * as solincinerator from "./solincinerator";
 import * as solomon from "./solomon";
 import * as solsave from "./solsave";
@@ -289,6 +291,7 @@ export const platforms: PlatformRaw[] = [
   asgardfi.platform,
   atrix.platform,
   aurory.platform,
+  backpack.platform,
   backwoods.platform,
   bananagun.platform,
   banger.platform,
@@ -499,6 +502,7 @@ export const platforms: PlatformRaw[] = [
   solanart.platform,
   solayer.platform,
   solcasino.platform,
+  solflare.platform,
   solincinerator.platform,
   solomon.platform,
   solsave.platform,
@@ -562,6 +566,7 @@ export const services: ServiceRaw[] = [
   ...asgardfi.services,
   ...atrix.services,
   ...aurory.services,
+  ...backpack.services,
   ...backwoods.services,
   ...bananagun.services,
   ...banger.services,
@@ -772,6 +777,7 @@ export const services: ServiceRaw[] = [
   ...solanart.services,
   ...solayer.services,
   ...solcasino.services,
+  ...solflare.services,
   ...solincinerator.services,
   ...solomon.services,
   ...solsave.services,
