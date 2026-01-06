@@ -4,7 +4,7 @@ export const platform: PlatformRaw = {
   id: "jupiter-exchange",
   name: "Jupiter",
   description:
-    "Jupiter is a DEX aggregator that routes trades across multiple liquidity pools to find optimal swap prices, also offering perpetuals, DCA, and limit orders.",
+    "Jupiter is building the infrastructure for an open financial future. With over $1 trillion in annual volume, Jupiter delivers a unified superapp experience that is simple to use, built to last, and proven at scale by operating a full-stack onchain product suite spanning self-custody, spot, perpetuals, lend, stake, stablecoin, token creation, prediction markets, developer APIs",
   defiLlamaId: "parent#jupiter",
   links: {
     website: "https://jup.ag/",
